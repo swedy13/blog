@@ -1,0 +1,48 @@
+header
+  display flex
+
+.left
+  left 0
+
+.right
+  right 0
+
+.logo
+  position fixed
+  padding 8px 0 0 8px
+  font-size 2em
+  font-weight 300
+  color #e1e1e1
+
+.main-nav
+  z-index 1
+  position fixed
+  
+  ul.nav-links
+    width 10vw
+    
+    li
+      display flex
+      flex-direction row-reverse
+      align-items center
+
+      .nav-color
+        height 30px
+        width .3vw
+        background-color #e1e1e1
+        border-right 1px solid #bbb
+
+      .nav-highlight
+        background-color #c04443
+
+      .current-nav
+        background-color #c04443
+            
+      .nav-link
+        visibility hidden
+        padding 6px
+        color #e5e5e5
+
+      .link-highlight
+        background-color #c04443
+        border-radius 2px 0 0 2px

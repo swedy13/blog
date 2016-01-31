@@ -1,0 +1,28 @@
+.parallax
+  z-index -1
+  height 100vh
+  position relative
+  overflow hidden
+
+// Home page 'about' parallax
+.parallax.about
+  background-image url(../img/home/mountain.jpg)
+  background-repeat no-repeat
+  background-size cover
+  background-position top center
+  background-attachment fixed
+  transform scale(1)
+      
+  .moon
+    height 50px
+    width 50px
+    // position absolute
+    background-image url(../img/home/moon.png)
+    background-size cover
+    filter contrast(1.5)
+    
+  .color-overlay
+    height 100%
+    width 100%
+    background-color midnightblue
+    opacity 0

@@ -1,0 +1,25 @@
+mixin nav-content()
+  ul.nav-links
+    li
+      .nav-color
+      a(href="#about").nav-link about
+    li
+      .nav-color
+      a(href="#portfolio").nav-link portfolio
+    li
+      .nav-color
+      a(href="#articles").nav-link articles
+    li
+      .nav-color
+      a(href="#contact").nav-link contact
+
+//- .mobile-nav
+//-   +nav-content()
+
+header
+  a(href="#home").logo.left mark swedberg
+  
+  nav.main-nav.right
+    +nav-content()
+
+    .mobile-nav-toggle: span

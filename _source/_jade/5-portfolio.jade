@@ -1,0 +1,20 @@
+section.portfolio#portfolio
+  .title-row
+    h2.head my portfolio
+    a.more view all
+  .slider
+    {% for post in site.posts limit: 8 %}
+    .container
+      .card
+        .flipper
+          .front
+            //- h3.head {{post.title}}
+            a(href="{{post.url}}" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})").link
+          a(href="{{post.url}}").back
+            .cap
+              h3.head {{post.title}}
+              hr
+              p.desc {{post.excerpt}}
+              hr
+              button.button More
+    {% endfor %}

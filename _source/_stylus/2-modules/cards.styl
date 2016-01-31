@@ -1,0 +1,149 @@
+// FOUR COLUMN
+@media screen and (min-width: 548px)
+
+  // Container
+  .container
+    display flex
+    align-items center
+    width 25%
+  
+  // Card
+  .card, .front, .back
+    height 300px
+    width 100%
+    min-width 250px
+  
+  .card
+    opacity 0
+    right -50px
+    position relative
+    margin 5px
+    perspective 1000
+  
+    &:hover .flipper
+      transform: rotateY(180deg);
+  
+  // Flip Animation
+  .flipper
+    transition 0.35s
+    transform-style preserve-3d
+    position relative
+  
+  .front, .back
+    backface-visibility hidden
+    position absolute
+  
+  .front
+    z-index 2
+    transform rotateY(0deg)
+  
+  .back
+    transform rotateY(180deg)
+  
+  // Front
+  .front
+    h3.head
+      z-index 1
+      position absolute
+      top 0
+      left 0
+      right 0
+      padding .5em
+      font-weight 500
+      color #333
+      text-align center
+  
+    a.link
+      display block
+      height 100%
+      width 100%
+      background-size cover
+      background-position top center
+  
+  // Back
+  .back
+    cursor default
+    
+    .cap
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      padding .5em
+      background-color rgba(83, 78, 120, 1)
+      color #e1e1e1
+  
+      h3.head
+          font-size 1em
+          text-align center
+          font-weight 500
+    
+      hr
+        width 100%
+        margin 6px -3px 5px -3px
+        
+      p.desc
+        font-size .9em
+        line-height 1.4
+  
+      button.button
+        padding: 2px 10px
+        margin 2px
+        background-color: #eee
+        border: 1px solid #ddd
+        border-radius: 3px
+        font-size .9em
+        font-weight 500
+        color: #333
+        float: right
+
+
+// THREE COLUMN
+@media screen and (max-width: 1036px)
+
+  // Container
+  .container
+    min-width 33%
+
+
+// TWO COLUMN
+@media screen and (max-width: 778px)
+
+  // Container
+  .container
+    min-width 50%
+
+
+// SINGLE COLUMN
+@media screen and (max-width: 548px)
+
+  // Container
+  .container
+    min-width 100%
+
+  // Card
+  .card
+    width 95vw
+    min-width 250px
+    height auto
+  
+  // Front
+  .front  
+    h3.head
+      padding: 6px 0 10px;
+      color: #e1e1e1;
+      text-align: center;
+      background-color: rgba(83, 78, 120, 1)
+  
+    .link
+      display block
+      height 250px
+      width 100%
+      margin-bottom 25px
+      background-image url('../img/home/portfolio.jpg')
+      background-size cover
+      background-position center
+
+  .back
+    display none
