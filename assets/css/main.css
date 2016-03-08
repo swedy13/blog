@@ -81,10 +81,21 @@ img {
   border: 0;
 }
 header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  z-index: 1;
+  position: fixed;
+  height: 36px;
+  width: 100%;
+  -webkit-transition-duration: height 0.1s;
+          transition-duration: height 0.1s;
+}
+header:hover {
+  background-color: #222;
+  box-shadow: 2px 2px 5px #1c1c1c;
+}
+header:hover .logo {
+  color: #e1e1e1;
+  background-color: #c04443;
+  box-shadow: 3px 3px 5px #333;
 }
 .left {
   left: 0;
@@ -94,36 +105,24 @@ header {
 }
 .logo {
   position: fixed;
-  padding: 8px 0 0 8px;
+  padding: 2px 5px;
   font-size: 2em;
   font-weight: 300;
   color: #e1e1e1;
 }
 .main-nav {
-  z-index: 1;
+  z-index: 2;
   position: fixed;
 }
 .main-nav ul.nav-links {
-  width: 10vw;
-}
-.main-nav ul.nav-links li {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -webkit-flex-direction: row-reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .main-nav ul.nav-links li .nav-color {
-  height: 30px;
-  width: 0.3vw;
+  height: 7px;
+  margin-bottom: 6px;
   background-color: #e1e1e1;
   border-right: 1px solid #bbb;
 }
@@ -135,12 +134,13 @@ header {
 }
 .main-nav ul.nav-links li .nav-link {
   visibility: hidden;
-  padding: 6px;
+  padding: 8px 8px 6px 8px;
+  padding-bottom: 4px;
   color: #e5e5e5;
 }
-.main-nav ul.nav-links li .link-highlight {
+.main-nav ul.nav-links li .nav-link:hover {
+  visibility: visible;
   background-color: #c04443;
-  border-radius: 2px 0 0 2px;
 }
 @media screen and (min-width: 548px) {
   .container {
@@ -154,9 +154,48 @@ header {
             align-items: center;
     width: 25%;
   }
+  .portfolio-link {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    right: -50px;
+    height: 300px;
+    width: 100%;
+    min-width: 250px;
+    margin: 5px;
+    background-color: #1c1c1c;
+    border: 2px solid #e1e1e1;
+  }
+  .portfolio-link:hover {
+    background-color: #534e78;
+    -webkit-transition: background-color 0.25s;
+            transition: background-color 0.25s;
+    cursor: pointer;
+  }
+  .portfolio-link:hover a {
+    color: #e1e1e1;
+    text-shadow: 0px 1px 1px #333;
+  }
+  .portfolio-link a {
+    font-size: 2em;
+    font-weight: 300;
+    color: #e1e1e1;
+  }
   .card,
   .front,
   .back {
+    display: block;
     height: 300px;
     width: 100%;
     min-width: 250px;
@@ -251,41 +290,100 @@ header {
     float: right;
   }
 }
-@media screen and (max-width: 1036px) {
+@media screen and (max-width: 1100px) {
   .container {
     min-width: 33%;
   }
+  .container:nth-child(4n+3) {
+    display: none;
+  }
 }
-@media screen and (max-width: 778px) {
+@media screen and (max-width: 850px) {
   .container {
     min-width: 50%;
+  }
+  .container:nth-child(3n+1) {
+    display: none;
   }
 }
 @media screen and (max-width: 548px) {
   .container {
     min-width: 100%;
+    margin-bottom: 30px;
+  }
+  .portfolio-link {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    right: -50px;
+    height: 3em;
+    width: 95vw;
+    min-width: 250px;
+    background-color: #1c1c1c;
+    border: 2px solid #e1e1e1;
+  }
+  .portfolio-link:hover {
+    background-color: #e1e1e1;
+    box-shadow: 0 0 1px 2px #e1e1e1;
+  }
+  .portfolio-link:hover a {
+    font-size: 1.8em;
+    font-weight: 500;
+    color: #534e78;
+    text-decoration: underline;
+  }
+  .portfolio-link a {
+    font-size: 1.7em;
+    font-weight: 300;
+    color: #e1e1e1;
   }
   .card {
     width: 95vw;
     min-width: 250px;
-    height: auto;
-  }
-  .front h3.head {
-    padding: 6px 0 10px;
-    color: #e1e1e1;
-    text-align: center;
-    background-color: #534e78;
   }
   .front .link {
     display: block;
     height: 250px;
     width: 100%;
-    margin-bottom: 25px;
     background-image: url("../img/home/portfolio.jpg");
     background-size: cover;
     background-position: center;
   }
-  .back {
+  .back h3.head {
+    position: absolute;
+    width: 100%;
+    margin-top: -250px;
+    padding: 6px 0 10px;
+    color: #e1e1e1;
+    text-align: center;
+    text-shadow: 0px 2px 2px #333;
+    background-color: rgba(83,78,120,0.75);
+    box-shadow: 0 2px 6px 2px #333;
+  }
+  .back hr {
+    display: none;
+  }
+  .back .desc {
+    position: absolute;
+    width: 100%;
+    margin-top: -32px;
+    padding: 6px;
+    background-color: rgba(225,225,225,0.85);
+    border-top: 1px solid #aaa;
+    box-shadow: 0 -2px 2px #aaa;
+  }
+  .back button {
     display: none;
   }
 }
