@@ -2,10 +2,10 @@ $('document').ready(function() {
   (function navHover() {
     // Show the nav menu links when header is hovered
 		$('header').mouseenter(function() {
-		  $('.nav-link').css('visibility','visible');
+		  $('.main-nav').find('.nav-link').css('visibility','visible');
 		});
 		$('header').mouseleave(function() {
-		  $('.nav-link').css('visibility','hidden');
+		  $('.main-nav').find('.nav-link').css('visibility','hidden');
 		});
 
     // Highlight the link header background when hovered

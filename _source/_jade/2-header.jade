@@ -13,13 +13,12 @@ mixin nav-content()
       .nav-color
       a(href="#contact").nav-link contact
 
-//- .mobile-nav
-//-   +nav-content()
 
-header
+header.site-header
   a(href="#home").logo.left mark swedberg
   
   nav.main-nav.right
     +nav-content()
 
-    .mobile-nav-toggle: span
+  .mobile-nav.right
+    +nav-content()
