@@ -1,0 +1,9 @@
+section.companies#companies
+  .row
+    .title case studies
+    {% for post in site.categories.companies reversed %}
+    .logo-thumb
+      span.centered
+        a(class="company-logo {{post.title}}" href="{{post.url}}" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})")
+        p.caption {{post.title}}
+    {% endfor %}

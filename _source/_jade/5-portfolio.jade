@@ -1,15 +1,12 @@
 section.portfolio#portfolio
-  //- .title-row
-  //-   h2.head my portfolio
-  //-   a.more view all
+  .portfolio-title portfolio        
   .slider
     // Iterate through portfolio posts to display up to 7 cards
-    {% for post in site.posts limit: 7 %}
+    |{% for post in site.categories.portfolio limit: 7 %}
     .container
       .card
         .flipper
           .front
-            //- h3.head {{post.title}}
             a(href="{{post.url}}" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})").link
           a(href="{{post.url}}").back
             .cap
@@ -18,9 +15,9 @@ section.portfolio#portfolio
               .desc {{post.excerpt}}
               hr
               button.button More
-    {% endfor %}
-
+    |{% endfor %}
+    
     // The last card will always show a link to the blog
     .container
       .portfolio-link
-        a(href="/portfolio") Portfolio
+        a(href="/portfolio") more
