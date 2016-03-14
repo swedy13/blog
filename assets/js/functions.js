@@ -14,7 +14,7 @@ $('document').ready(function() {
 		});
 		$('.nav-links').find('li').mouseleave(function() {
 		  $(this).find('.nav-color').removeClass('nav-highlight');
-		});		
+		});
 	})();
 
   // Highlights the current anchor link.
@@ -22,13 +22,13 @@ $('document').ready(function() {
   $('li').children('div').eq(0).addClass('current-nav');
 
   // Shows the home page company logo caption on hover.
-  $('a.company-logo').hover(
+  $('.logo-thumb').hover(
     function() {
-      $(this).next().show().css('opacity', 0).animate({opacity: 1}, 300);
+      $(this).find('.caption').show().css('opacity', 0).animate({opacity: 1}, 300);
     },
     function() {
-      $(this).next().hide();
-  });
+      $(this).find('.caption').hide();
+    });
 });
 
 

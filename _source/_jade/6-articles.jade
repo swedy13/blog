@@ -1,0 +1,15 @@
+section.articles#articles
+  .articles-container
+    .articles-title articles
+    ul
+      |{% for post in site.categories.articles reversed limit: 3 offset: 2 %}
+      li.article
+        a(class="article-image" href="{{post.url}}" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})")
+        .article-content
+          a(class="article-title" href="{{post.url}}") {{post.title}}
+          .article-snippet {{post.excerpt}}    
+      li.article-divider
+        hr
+      |{% endfor %}
+    .articles-more 
+      p read more

@@ -103,3 +103,17 @@ Wireframing
 - Samples: 
 - Tools:
 - Companies: Mark Swedberg, Mythros
+
+
+------------------------------------------------
+****************   ARTICLES   ******************
+------------------------------------------------
+Tools
+Process
+Documentation
+Methodologies (agile)
+Paradigms
+- Flat Design
+EQ
+- Zoiology
+Design Pattern Library

@@ -7,8 +7,8 @@ section.portfolio#portfolio
       .card
         .flipper
           .front
-            a(href="{{post.url}}" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})").link
-          a(href="{{post.url}}").back
+            a(class="link" href="{{post.url}}" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})")
+          a(class="back" href="{{post.url}}")
             .cap
               h3.head {{post.title}}
               hr
@@ -20,4 +20,4 @@ section.portfolio#portfolio
     // The last card will always show a link to the blog
     .container
       .portfolio-link
-        a(href="/portfolio") more
+        a(href="/portfolio") see more

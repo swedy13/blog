@@ -1,12 +1,23 @@
 .contact
+  display flex
+  align-items center
+  height 80px
   background-color #e1e1e1
 
+  .contact-title
+    margin-right 30px
+    font-size 1.75em
+    font-weight 300
+    color gray
+    white-space nowrap
+
   .social-row
-    position relative
     display flex
-    width 100%
+    align-items center
     justify-content center
-    
+    height 100%
+    width 100%
+          
     h2.head
       position absolute
       top 0
@@ -20,9 +31,9 @@
       display flex
       align-items center
       justify-content center
-      height 70px
-      width 70px
-      margin 25px
+      height 60px
+      width 60px
+      margin 0 25px
       border-radius 100%
       transition .5s
 
@@ -30,7 +41,7 @@
         z-index 1
         display none
         position absolute
-        margin-top 25px
+        margin-top 5px
         margin-left 15px
         padding 2px 6px
         background-color palegoldenrod
@@ -38,11 +49,17 @@
 
       &.upwork
         img
-          margin-top 7px
+          margin-top 10px
 
       &.linkedin
         img
-          margin-bottom 2px
+          height 60%
+          width 60%
+
+      &.skype
+        img
+          height 60%
+          width 60%
 
       img
         height 45px
@@ -50,6 +67,7 @@
         filter brightness(.4)
 
       &:hover
+        border-color transparent
         box-shadow 1px 1px 1px #aaa
 
         .contact-caption
@@ -68,4 +86,4 @@
           background-color #00adef
   
         &.email
-          background-color white
+          background-color #d74a38
