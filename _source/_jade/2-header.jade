@@ -2,16 +2,19 @@ mixin nav-content()
   ul.nav-links
     li
       .nav-color
-      a(href="#about").nav-link about
+      a(href="/").nav-link home
     li
       .nav-color
-      a(href="#portfolio").nav-link portfolio
+      a(class="nav-link" href="/case-studies") case studies
     li
       .nav-color
-      a(href="#articles").nav-link articles
+      a(class="nav-link" href="/portfolio") portfolio
     li
       .nav-color
-      a(href="#contact").nav-link contact
+      a(class="nav-link" href="/articles") articles
+    li
+      .nav-color
+      a(class="nav-link" href="#contact") contact
 
 
 header.site-header

@@ -4040,7 +4040,9 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 body {
+  width: 100%;
   margin: 0;
+  overflow-x: hidden;
   font: 16px/1;
   font-family: Roboto, sans-serif;
 }
@@ -4177,13 +4179,15 @@ img {
   }
   .main-nav ul.nav-links li .nav-link {
     visibility: hidden;
-    padding: 8px 8px 6px 8px;
+    padding: 8px 12px 6px 12px;
     padding-bottom: 4px;
     color: #e5e5e5;
   }
   .main-nav ul.nav-links li .nav-link:hover {
     visibility: visible;
     background-color: #c04443;
+    -webkit-transition: 0.05s;
+            transition: 0.05s;
   }
 }
 @media screen and (min-width: 548px) {
@@ -4249,11 +4253,11 @@ img {
     width: 25%;
   }
   .portfolio-link {
+    visibility: hidden;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    opacity: 0;
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -4263,7 +4267,6 @@ img {
         -ms-flex-pack: center;
             justify-content: center;
     position: relative;
-    right: -50px;
     height: 300px;
     width: 100%;
     min-width: 250px;
@@ -4295,8 +4298,7 @@ img {
     min-width: 250px;
   }
   .card {
-    opacity: 0;
-    right: -50px;
+    visibility: hidden;
     position: relative;
     margin: 5px;
     -webkit-perspective: 1000;
@@ -4529,9 +4531,9 @@ img {
 .bio .bio-container .bio-picture {
   display: inline;
   float: left;
-  height: 175px;
-  width: 175px;
-  margin: 0 8px 8px 0;
+  height: 165px;
+  width: 165px;
+  margin: 0 15px 5px 0;
   padding: 5px;
   border: 2px solid #d3d3d3;
   border-radius: 5px;
@@ -4711,6 +4713,7 @@ img {
   margin: 25px 0;
 }
 .articles .articles-container .articles-title {
+  display: none;
   margin-bottom: 15px;
   font-size: 2em;
   font-weight: 300;
@@ -4722,7 +4725,10 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  visibility: hidden;
   padding: 25px 15px;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 .articles .articles-container .article:hover {
   background-color: #fafad2;
@@ -4864,8 +4870,8 @@ img {
   width: 60px;
   margin: 0 25px;
   border-radius: 100%;
-  -webkit-transition: 0.5s;
-          transition: 0.5s;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
 }
 .contact .social-row .link .contact-caption {
   z-index: 1;

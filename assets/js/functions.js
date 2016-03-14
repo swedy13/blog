@@ -50,7 +50,6 @@ $(window).scroll(function() {
 		 nav.removeClass('current-nav');
 		 nav.eq(1).addClass('current-nav');
 		 }
-     
 	   })(); */
 
   // Dims the parallax image based on scroll position
@@ -69,36 +68,58 @@ $(window).scroll(function() {
 		}		
 	})();
 
+  /* var currentHeight = windowPosition / $(window).height();
+     console.log(currentHeight); */
+
   // Displays company logos with a pop-up effect for each logo
 	(function showLogos() {
-    var completed;
 		if ($('#companies').offset().top - ($(window).height() / 1.1) < windowPosition) {
       $('.title').show().addClass('animated fadeInLeft');
-      setTimeout(function() {
-			  $('.logo-thumb').each(function(i) {
-				  setTimeout(function() {
-					  $('.logo-thumb').eq(i)
-               .css('visibility', 'visible')
-               .addClass('animated bounceInUp');
-				  }, 150 * i);
-        });
-      }, 100);
+			$('.logo-thumb').each(function(i) {
+				setTimeout(function() {
+					$('.logo-thumb').eq(i)
+             .css('visibility', 'visible')
+             .addClass('animated bounceInUp');
+				}, 150 * i);
+      });
 		}		
 	})();
-
   
 	// Displays portfolio cards with a slide-in effect for each card
 	(function showCards() {
 		if ($('#portfolio').offset().top - ($(window).height() / 1.6) < windowPosition) {
       $('.portfolio-title').show().addClass('animated zoomIn');
-			$('.card').each(function(i) {
-				setTimeout(function() {
-					$('.card').eq(i).animate({opacity: '1.0', right: '0px'}, 450);
-				}, 100 * i);
-      });
+
       setTimeout(function() {
-        $('.portfolio-link').animate({opacity: '1.0', right: '0px'}, 450);
-      }, 700);
+		    $('.card').each(function(i) {
+				  setTimeout(function() {
+					  $('.card').eq(i)
+               .css('visibility', 'visible')
+               .addClass('animated flipInY');
+				  }, 200 * i);
+        });
+        setTimeout(function() {
+          $('.portfolio-link')
+             .css('visibility', 'visible')
+             .addClass('animated flipInY');
+        }, 1400);
+      }, 300);      
+		}
+	})();
+
+  // Displays articles with a zoom-in effect for each card
+	(function showArticles() {
+		if ($('#articles').offset().top - ($(window).height() / 1.8) < windowPosition) {
+      $('.articles-title').show().addClass('animated slideInDown');
+      setTimeout(function() {
+			  $('.article').each(function(i) {
+				  setTimeout(function() {
+					  $('.article').eq(i)
+               .css('visibility', 'visible')
+               .addClass('animated fadeIn');
+				  }, 400 * i);
+        });
+      }, 300);
 		}
 	})();
 
