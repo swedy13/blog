@@ -1,4 +1,4 @@
-.case-studies
+.blog
   display flex
   flex-direction column
   align-items center
@@ -9,34 +9,35 @@
   background-repeat no-repeat
   background-attachment fixed
 
-  h1.case-studies-title
+  h1.blog-header
+    visibility hidden
     padding-bottom 15px
     font-size 2em
     font-weight 300
     color #e1e1e1
   
-  section.company
+  article.blog-post
+    visibility hidden
     display flex
     justify-content center
 
     &:hover
-      .company-container
+      .blog-container
         z-index 1
         background-color #f1f5ff
         box-shadow 0 0 0 6px #f1f5ff, 0 0 12px 4px #999
         transition .2s
 
-        .company-picture-container
+        .blog-picture-container
           box-shadow 0 0 2px #aaa, 0 0 6px #d5d5d5
-
   
-    .company-container
+    .blog-container
       display flex
       width 700px
       padding 25px 15px
       background-color rgba(255, 255, 255, .8)
-    
-      .company-picture-container
+
+      .blog-picture-container
         display inline
         float left
         height 100px
@@ -47,23 +48,23 @@
         border 1px solid #d5d5d5
         border-radius 3px
     
-        a.company-picture
+        a.blog-picture
           display block
           height 100px
           width 100px
           background-size cover
           background-repeat no-repeat
     
-      .company-content
+      .blog-content
         color #444
         
-        a.company-title
+        a.blog-title
           h1
             margin-bottom 8px
             font-size 1.3em
             font-weight 400
     
-  .company-divider
+  .blog-divider
     width 700px
     margin 0px
     padding 0px

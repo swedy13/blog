@@ -55,61 +55,82 @@ SyntheSys
 ------------------------------------------------
 ****************   PORTFOLIO   *****************
 ------------------------------------------------
+User Feedback
+- Samples: 
+- Tools:
+- Companies: DataQlick, GuruFace, Mark Swedberg, Mythros
 Flow Analysis
 - Samples: 
 - Tools:
-- Companies: GuruFace, Pairable
+- Companies: DataQlick, GuruFace, Pairable
+Usability Reviews
+- Samples: 
+- Tools:
+- Companies: Mythros
+------------------------------------------------
+Site Critiques
+- Samples: 
+- Tools:
+- Companies: GuruFace, Mythros
 Information Architectrue
 - Samples: 
 - Tools:
-- Companies: GuruFace, Mythros, SyntheSys
-Interaction Design
-- Samples: 
-- Tools:
-- Companies: Mark Swedberg, Mythros
-Mobile Apps
-- Samples: 
-- Tools:
-- Companies: Mythros, Pairable
+- Companies: GuruFace, Mythros, Pairable
 Page Optimization
 - Samples: 
 - Tools:
 - Companies: DataQlick, GuruFace
+------------------------------------------------
+Wireframing
+- Samples: 
+- Tools:
+- Companies: DataQlick, Mark Swedberg, Mythros
+Responsive Design
+- Samples: 
+- Tools:
+- Companies: Mark Swedberg, Mythros, Pairable
+Interaction Design
+- Samples: 
+- Tools:
+- Companies: Mark Swedberg, Mythros
+------------------------------------------------
 Prototyping
 - Samples: 
 - Tools:
 - Companies: Mythros, Pairable
-Responsive Design
-- Samples: 
-- Tools:
-- Companies: Mark Swedberg, Mythros
-Site Critiques
-- Samples: 
-- Tools:
-- Companies: GuruFace
-Usability Reviews
-- Samples: 
-- Tools:
-- Companies: DataQlick, Mythros
-User Feedback
-- Samples: 
-- Tools:
-- Companies: Mythros, SyntheSys
 Web Apps
 - Samples: 
 - Tools:
-- Companies: DataQlick, GuruFace, Mythros
-Wireframing
+- Companies: Mythros
+Mobile Apps
 - Samples: 
 - Tools:
-- Companies: Mark Swedberg, Mythros
+- Companies:
 
 
 ------------------------------------------------
 ****************   ARTICLES   ******************
 ------------------------------------------------
 Tools
+
 Process
+1. Analysis
+   - User Feedback
+   - Flow Analysis
+   - Usability Testing
+2. Planning
+   - Site Critiques
+   - Information Architectrue
+   - Page Optimization
+3. Design
+   - Wireframing
+   - Responsive Design
+   - Interaction Design
+4. Development
+   - Prototyping
+   - Web Apps
+   - Mobile Apps
+
 Documentation
 Methodologies (agile)
 Paradigms
