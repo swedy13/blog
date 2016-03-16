@@ -1,3 +1,1 @@
-<h1 class="blog-header">case studies</h1>{% for post in site.categories.companies reversed %}
-{% include posts.html %}
-{% endfor %}
+<div class="companies-title">case studies</div><div class="companies-slider"><!-- Iterate through all companies posts-->{% for post in site.categories.companies %}<div class="companies-card"><a href="{{post.url}}" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})" class="companies-picture {{post.title}}"></a><div class="companies-content"><div class="companies-name">{{post.title}}</div><div class="companies-description">{{post.excerpt}}</div><a href="{{post.url}}" class="companies-link">more</a></div></div>{% endfor %}</div>

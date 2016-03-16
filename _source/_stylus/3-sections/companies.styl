@@ -1,71 +1,92 @@
-.case-studies
+.companies-page
   display flex
   flex-direction column
-  align-items center
   justify-content center
-  padding 50px 0 30px
-  background-image url(/assets/img/home/mountain.jpg)
-  background-size cover
-  background-repeat no-repeat
-  background-attachment fixed
+  height calc(100vh - 110px)
+  padding 25px 0 5px
+  background-color #534e78
 
-  h1.case-studies-title
-    padding-bottom 15px
+  .companies-title
+    display none
+    align-self center
+    margin 5px 0 15px
     font-size 2em
     font-weight 300
-    color #e1e1e1
-  
-  section.company
+    color #e3e3e3
+
+  .companies-slider
     display flex
+    align-items center
     justify-content center
+    margin-bottom 75px
 
-    &:hover
-      .company-container
-        z-index 1
-        background-color #f1f5ff
-        box-shadow 0 0 0 6px #f1f5ff, 0 0 12px 4px #999
-        transition .2s
-
-        .company-picture-container
-          box-shadow 0 0 2px #aaa, 0 0 6px #d5d5d5
-
-  
-    .company-container
+    .companies-card
       display flex
-      width 700px
-      padding 25px 15px
-      background-color rgba(255, 255, 255, .8)
-    
-      .company-picture-container
-        display inline
-        float left
-        height 100px
-        width 100px
-        margin-right 25px
-        padding 5px
+      flex-direction column
+      height 300px
+      width 200px
+      margin 15px 8px
+      border 1px solid #777
+      border-radius 3px
+      box-shadow 1px 1px 4px #555, -1px 0px 4px #666, 0px -1px 2px #666
+      transition .1s
+
+      &:hover
+        box-shadow 0 27px 24px 0 rgba(0, 0, 0, 0.3), 0 40px 77px 0 rgba(0, 0, 0, 0.34)
+
+        .companies-picture
+          filter grayscale(0)
+          transition .2s
+
+          &.Pairable
+            background-image: url(/assets/img/posts/thumbnails/pairable-hover.png) !important
+  
+          &.GuruFace
+            background-image: url(/assets/img/posts/thumbnails/guruface-hover.png) !important
+
+        .companies-content
+          .companies-link
+            background-color #8984AE
+            color white
+            transition .2s
+            
+      .companies-picture
+        display block
+        text-align center
+        height 115px
+        width 100%
+        background-repeat no-repeat
+        background-position center
         background-color white
-        border 1px solid #d5d5d5
-        border-radius 3px
-    
-        a.company-picture
-          display block
-          height 100px
-          width 100px
-          background-size cover
-          background-repeat no-repeat
-    
-      .company-content
-        color #444
+        border-bottom 1px solid lightgray
+        filter grayscale(1)
+                
+      .companies-content
+        position relative
+        height calc(100% - 116px)
+        padding 8px
+        background-color #e3e3e3
         
-        a.company-title
-          h1
-            margin-bottom 8px
-            font-size 1.3em
-            font-weight 400
-    
-  .company-divider
-    width 700px
-    margin 0px
-    padding 0px
-    border none
-    border-top 1px solid transparent
+        .companies-name
+          margin-bottom 5px
+          text-align center
+          font-size 1.3em
+          font-weight 300
+          font-color #444
+
+        .companies-description
+          color #444
+
+        .companies-link
+          position absolute
+          bottom 7px
+          right 5px
+          padding 7px 10px
+          margin 2px
+          background-color transparent
+          border 1px solid #aaa
+          border-radius 3px
+          font-size 0.9em
+          font-weight 500
+          color #534e78
+          float right

@@ -1,18 +1,42 @@
 // ------------------------------------------------------
 // *********************  METHODS  **********************
 // ------------------------------------------------------
+// Runs an animation to display the page title
+function pageTitleReveal(selectorName, animationType) {
+  var selector = $("." + selectorName);
+  var animation = 'animated ' + animationType;
+
+  selector.show().css('visibility', 'visible').addClass(animation);
+};
+
+// Runs an animation
+function animationEffect(selectorName, animationType, animationSpeed) {
+  var selector = $("." + selectorName);
+  var animation = 'animated ' + animationType;
+
+  selector.each(function(i) {
+	  setTimeout(function() {
+		  selector.eq(i)
+         .css('visibility', 'visible')
+         .addClass(animation);
+	  }, animationSpeed * i);
+  });
+};
+
 // Portfolio flip-in animation
 function portfolioCardFlip(flipSpeed) {
-  $('.portfolio-title').show().addClass('animated zoomIn');
   setTimeout(function() {
-		$('.portfolio-card').each(function(i) {
-			setTimeout(function() {
-				$('.portfolio-card').eq(i)
-           .css('visibility', 'visible')
-           .addClass('animated flipInY');
-			}, flipSpeed * i);
-    });
+    animationEffect('portfolio-card', 'flipInY', flipSpeed)
   }, 300);
+};
+
+// Home page company logos pop-up effect
+// ----- I don't know how to turn this thing off...
+function showLogos(windowPosition) {
+	if ($('#home-companies').offset().top - ($(window).height() / 1.1) < windowPosition) {
+    pageTitleReveal('home-companies-title', 'fadeInLeft');
+    animationEffect('home-companies-logo-thumb', 'bounceInUp', 150);
+	}
 };
 
 
@@ -21,7 +45,7 @@ function portfolioCardFlip(flipSpeed) {
 // ------------------------------------------------------
 $('document').ready(function() {
   // ------------------------------------------------------
-  //                   GLOBAL FUNCTIONS
+  //                   ON-LOAD FUNCTIONS
   // ------------------------------------------------------
   (function navHover() {
     // Show the nav menu links when header is hovered
@@ -50,12 +74,12 @@ $('document').ready(function() {
   //                  HOME PAGE FUNCTIONS
   // ------------------------------------------------------
   // Shows the home page company logo caption on hover.
-  $('.logo-thumb').hover(
+  $('.home-companies-logo-thumb').hover(
     function() {
-      $(this).find('.caption').show().css('opacity', 0).animate({opacity: 1}, 300);
+      $(this).find('.home-companies-caption').show().css('opacity', 0).animate({opacity: 1}, 300);
     },
     function() {
-      $(this).find('.caption').hide();
+      $(this).find('.home-companies-caption').hide();
     });
 
 
@@ -63,86 +87,94 @@ $('document').ready(function() {
   //     ARTICLES / CASE STUDIES / PORTFOLIO FUNCTIONS
   // ------------------------------------------------------
   // Fades in the blog posts
-  (function blogContentLoad() {
-    setTimeout(function() {
-      $('.blog-header').css('visibility', 'visible').addClass('animated fadeIn');
-    }, 150);
-    setTimeout(function() {
-      $('.blog-post').each(function(i) {
-        setTimeout(function() {
-          $('.blog-post').eq(i)
-             .css('visibility', 'visible')
-             .addClass('animated fadeInUp');
-        }, 150 * i);
-      });
-    }, 750);
-  })();
+  if ($('div').hasClass('blog')) {
+    (function blogContentLoad() {
+      setTimeout(function() {
+        pageTitleReveal('blog-header', 'zoomIn');
+      }, 150);
+      setTimeout(function() {
+        animationEffect('blog-post', 'fadeInUp', 150);
+      }, 750);
+    })();  }
 
-  // Portfolio page card flip
+  // Companies page functions (title animation, display animation, slider animation)
+  if ($('div').hasClass('companies-page')) {
+    pageTitleReveal('companies-title', 'zoomIn');
+  }
+
+  // Portfolio page (title animation, display animation, card flip animation)
   if ($('div').hasClass('portfolio-page')) {
+    pageTitleReveal('portfolio-title', 'zoomIn');
     portfolioCardFlip(125);
+  }
+
+  // See the page-scroll methods section below for more information
+  if ($('section').hasClass('home-companies')) {
+    onScroll();
   }
 });
 
 
-$(window).scroll(function() {
-	var windowPosition	= $(window).scrollTop();
+// ------------------------------------------------------
+//                   PAGE-SCROLL METHODS
+// ------------------------------------------------------ 
+function onScroll() {
+  $(window).scroll(function() {
+	  var windowPosition	= $(window).scrollTop();
 
-  // Dims the parallax image based on scroll position
-	(function parallax() {
-		var parallaxWidth		= $('.color-overlay').width();
-		var parallaxHeight	= $('.parallax').height();
-		var viewedParallax	= windowPosition / parallaxHeight;
-		
-		if (viewedParallax < 1) {
-			var parallaxFilters = 'grayscale(' + viewedParallax + ') brightness(' + (1 - viewedParallax / 2) + ')';
-			var parallaxScale = 1 + (viewedParallax * .25);
-			var parallaxOffset = -parallaxScale*50;
-			$('.color-overlay').css({'opacity':(viewedParallax / 2)});
-			$('.parallax.about').css({WebkitFilter: parallaxFilters});
-			$('.moon').css('right', -51);
-		}		
-	})();
+    // Activates an event at a particular position on the page
+    function scrollEvent(selectorName, divisor) {
+      var windowOffset = $(selectorName).offset().top;
+      var windowHeight = $(window).height();
+      
+      if (windowOffset - (windowHeight / divisor) < windowPosition) {
+        var fireEvent = true;
+        return fireEvent;
+      }
+    }
 
-  // Displays company logos with a pop-up effect for each logo
-	(function showLogos() {
-		if ($('#companies').offset().top - ($(window).height() / 1.1) < windowPosition) {
-      $('.title').show().addClass('animated fadeInLeft');
-			$('.logo-thumb').each(function(i) {
-				setTimeout(function() {
-					$('.logo-thumb').eq(i)
-             .css('visibility', 'visible')
-             .addClass('animated bounceInUp');
-				}, 150 * i);
-      });
-		}		
-	})();
-  
-	// Displays portfolio cards with a slide-in effect for each card
-	(function showCards() {
-		if ($('#portfolio').offset().top - ($(window).height() / 1.6) < windowPosition) {
+    // Dims the parallax image based on scroll position
+	  (function parallax() {
+		  var parallaxWidth		= $('.color-overlay').width();
+		  var parallaxHeight	= $('.parallax').height();
+		  var viewedParallax	= windowPosition / parallaxHeight;
+		  
+		  if (viewedParallax < 1) {
+			  var parallaxFilters = 'grayscale(' + viewedParallax + ') brightness(' + (1 - viewedParallax / 2) + ')';
+			  var parallaxScale = 1 + (viewedParallax * .25);
+			  var parallaxOffset = -parallaxScale*50;
+			  $('.color-overlay').css({'opacity':(viewedParallax / 2)});
+			  $('.parallax.about').css({WebkitFilter: parallaxFilters});
+			  $('.moon').css('right', -51);
+		  }		
+	  })();
+
+    if (showCards() == true) {
+      pageTitleReveal('portfolio-title', 'zoomIn');
       portfolioCardFlip(150);
       setTimeout(function() {
         $('.portfolio-more')
            .css('visibility', 'visible')
            .addClass('animated flipInY');
       }, 1400);
-		}
-	})();
+    }
+    
+	  // Displays portfolio cards with a slide-in effect for each card
+	  function showCards() {
+      return scrollEvent('#portfolio', 1.6);
+	  };
 
-  // Displays articles with a zoom-in effect for each card
-	(function showArticles() {
-		if ($('#home-articles').offset().top - ($(window).height() / 1.8) < windowPosition) {
-      $('.home-articles-title').show().addClass('animated slideInDown');
-      setTimeout(function() {
-			  $('.home-article').each(function(i) {
-				  setTimeout(function() {
-					  $('.home-article').eq(i)
-               .css('visibility', 'visible')
-               .addClass('animated fadeIn');
-				  }, 400 * i);
-        });
-      }, 300);
-		}
-	})();
-});
+    // Displays logos on the home page (see above for function information)
+    showLogos(windowPosition);
+
+    // Displays articles with a zoom-in effect for each card
+	  (function showArticles() {
+		  if ($('#home-articles').offset().top - ($(window).height() / 1.8) < windowPosition) {
+        pageTitleReveal('home-articles-title', 'slideInDown');
+        setTimeout(function() {
+          animationEffect('home-article', 'fadeIn', 400);
+        }, 300);
+		  }
+	  })();
+  });
+};
