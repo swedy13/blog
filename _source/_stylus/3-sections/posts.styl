@@ -20,13 +20,16 @@
     visibility hidden
     display flex
     justify-content center
+    position static
 
     &:hover
-      .blog-container
-        background-color #f1f5ff
-        box-shadow 0 0 0 6px #f1f5ff, 0 0 12px 4px #999
+      z-index 1
         
-        transition .2s
+      .blog-container
+        background-color rgba(255, 255, 255, 1)
+        box-shadow 0 18px 14px 0 rgba(0, 0, 0, 0.3), 0 20px 37px 0 rgba(0, 0, 0, 0.34)
+        transform scale(1.1)
+        transition .3s ease-in-out
 
         .blog-picture-container
           box-shadow 0 0 2px #aaa, 0 0 6px #d5d5d5

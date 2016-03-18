@@ -24,11 +24,11 @@ function animationEffect(selectorName, animationType, animationSpeed) {
 };
 
 // Portfolio flip-in animation
-function portfolioCardFlip(flipSpeed) {
-  setTimeout(function() {
-    animationEffect('portfolio-card', 'flipInY', flipSpeed)
-  }, 300);
-};
+/* function portfolioCardFlip(flipSpeed) {
+   setTimeout(function() {
+   animationEffect('portfolio-card', 'flipInY', flipSpeed)
+   }, 300);
+   }; */
 
 // Home page company logos pop-up effect
 // ----- I don't know how to turn this thing off...
@@ -100,12 +100,18 @@ $('document').ready(function() {
   // Companies page functions (title animation, display animation, slider animation)
   if ($('div').hasClass('companies-page')) {
     pageTitleReveal('companies-title', 'zoomIn');
+    setTimeout(function() {
+      animationEffect('companies-container', 'fadeInRight', 200)
+    }, 450);
   }
 
   // Portfolio page (title animation, display animation, card flip animation)
   if ($('div').hasClass('portfolio-page')) {
     pageTitleReveal('portfolio-title', 'zoomIn');
-    portfolioCardFlip(125);
+    setTimeout(function() {
+      animationEffect('portfolio-card', 'flipInY', 125)
+    }, 300);
+    /* portfolioCardFlip(125); */
   }
 
   // See the page-scroll methods section below for more information
@@ -151,7 +157,10 @@ function onScroll() {
 
     if (showCards() == true) {
       pageTitleReveal('portfolio-title', 'zoomIn');
-      portfolioCardFlip(150);
+      setTimeout(function() {
+        animationEffect('portfolio-card', 'flipInY', 150)
+      }, 300);
+      /* portfolioCardFlip(150); */
       setTimeout(function() {
         $('.portfolio-more')
            .css('visibility', 'visible')

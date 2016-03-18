@@ -2,7 +2,7 @@ article.portfolio#portfolio
   .portfolio-title portfolio
   .portfolio-slider
     // Iterate through all portfolio posts
-    |{% for post in site.categories.portfolio %}
+    |{% for post in site.categories.portfolio reversed %}
     .portfolio-container
       .portfolio-card
         .portfolio-flipper

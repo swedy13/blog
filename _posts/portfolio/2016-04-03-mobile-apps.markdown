@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Responsive"
-thumbnail: wireframing.jpg
-date: 2016-01-01 09:15:51 -0300
+title: "Mobile Apps"
+thumbnail: mobile.jpg
+date: 2016-03-17 09:15:51 -0300
 categories: portfolio
 ---
 Hello world, I'm the wireframing post...'

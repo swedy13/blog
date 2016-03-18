@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Usability Testing"
-thumbnail: wireframing.jpg
-date: 2016-01-01 09:15:51 -0300
+title: "Usability Reviews"
+thumbnail: useability-reviews.jpg
+date: 2016-01-03 09:15:51 -0300
 categories: portfolio
 tags: planning, mythros
 ---

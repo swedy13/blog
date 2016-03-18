@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Information Architecture"
-thumbnail: wireframing.jpg
-date: 2016-01-01 09:15:51 -0300
+thumbnail: information-architecture.jpg
+date: 2016-02-02 09:15:51 -0300
 categories: portfolio
 tags: planning, guruface, mythros, pairable
 ---

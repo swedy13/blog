@@ -56,56 +56,71 @@ SyntheSys
 ****************   PORTFOLIO   *****************
 ------------------------------------------------
 User Feedback
-- Samples: 
-- Tools:
-- Companies: DataQlick, GuruFace, Mark Swedberg, Mythros
+- Pictures: 
+- Methods: Surveys, Interviews, Focus Groups
+- Tools:  SurveyMonkey, Skype, WebEx, Invision
+- Companies: DataQlick, GuruFace, Mark Swedberg, Mythros, SyntheSys
 Flow Analysis
-- Samples: 
-- Tools:
+- Pictures: 
+- Methods: True Intent, Card Sorting, Traffic Flow
+- Tools: SurveyMonkey, Google Analytics, Social Media Demographics
 - Companies: DataQlick, GuruFace, Pairable
 Usability Reviews
-- Samples: 
-- Tools:
+- Pictures: 
+- Methods: Eye Tracking, Usability Benchmarking
+- Tools: 
 - Companies: Mythros
 ------------------------------------------------
+
 Site Critiques
-- Samples: 
-- Tools:
+- Pictures: 
+- Methods: Screenshots, Markup, Documentation
+- Tools: Paint, Photoshop, Word, GDocs
 - Companies: GuruFace, Mythros
 Information Architectrue
-- Samples: 
-- Tools:
-- Companies: GuruFace, Mythros, Pairable
+- Pictures: 
+- Methods: Sitemap, Flow Chart
+- Tools: PowerPoint, SlickPlan
+- Companies: GuruFace, Pairable, Mythros, SyntheSys
 Page Optimization
-- Samples: 
-- Tools:
+- Pictures: 
+- Methods: Google Analytics, CrazyEgg, Optimizely
+- Tools: Heatmaps, A/B Split Testing
 - Companies: DataQlick, GuruFace
 ------------------------------------------------
+
 Wireframing
-- Samples: 
-- Tools:
+- Pictures: 
+- Methods: 
+- Tools: InDesign, Photoshop, UXPin
 - Companies: DataQlick, Mark Swedberg, Mythros
-Responsive Design
-- Samples: 
-- Tools:
-- Companies: Mark Swedberg, Mythros, Pairable
+Mockups
+- Pictures: 
+- Methods: Low/High Fidelity, Responsive/Mobile Variants
+- Tools: Photoshop, Illustrator
+- Companies: Pairable, Mark Swedberg, Mythros, SyntheSys
 Interaction Design
-- Samples: 
-- Tools:
+- Pictures: 
+- Methods: Page Flow, Interactive Elements, Animated Effects
+- Tools: InVision, Pixate, InDesign
 - Companies: Mark Swedberg, Mythros
 ------------------------------------------------
+
 Prototyping
-- Samples: 
-- Tools:
+- Pictures: 
+- Methods: Local Server, Interactive, Page Routing
+- Tools: HTML5, Jade, Handlebars, CSS3, Stylus, JavaScript, JQuery
 - Companies: Mythros, Pairable
-Web Apps
-- Samples: 
-- Tools:
-- Companies: Mythros
+Websites & Web Apps
+- Pictures: 
+- Methods: Front/Backend Development, Database Queries, Deployment
+- Tools: WordPress, Jekyll, Node.js, Meteor.js, MongoDB, GitHub
+- Companies: Mythros, SyntheSys
 Mobile Apps
-- Samples: 
-- Tools:
-- Companies:
+- Pictures: 
+- Methods: 
+- Tools: 
+- Companies: 
 
 
 ------------------------------------------------
