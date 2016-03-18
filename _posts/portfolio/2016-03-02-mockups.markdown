@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mockups"
-thumbnail: mockups.jpg
+thumbnail: mockups.png
 date: 2016-03-02 09:15:51 -0300
 categories: portfolio
 ---

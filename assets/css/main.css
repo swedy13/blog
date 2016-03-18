@@ -4338,20 +4338,34 @@ img {
   .portfolio-front .portfolio-head {
     z-index: 1;
     position: absolute;
-    top: 0;
+    width: 100%;
+    bottom: -4px;
     left: 0;
     right: 0;
     padding: 0.5em;
-    font-weight: 500;
-    color: #333;
+    padding-bottom: 0.75em;
+    background-color: #111;
+    opacity: 0.7;
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #fff;
     text-align: center;
   }
   .portfolio-front .portfolio-link {
     display: block;
     height: 100%;
     width: 100%;
-    background-size: cover;
-    background-position: top center;
+    background-size: 375px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .portfolio-front .portfolio-link.Wireframing {
+    background-size: 450px;
+    background-position: center right;
+  }
+  .portfolio-front .portfolio-link.Mockups {
+    background-size: 450px;
+    background-position: center left;
   }
   .portfolio-back {
     cursor: default;

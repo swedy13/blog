@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Usability Reviews"
-thumbnail: useability-reviews.jpg
+thumbnail: useability-reviews.png
 date: 2016-01-03 09:15:51 -0300
 categories: portfolio
 tags: planning, mythros

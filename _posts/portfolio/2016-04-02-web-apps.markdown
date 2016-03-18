@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Websites & Web Apps"
-thumbnail: web.jpg
+thumbnail: web.png
 date: 2016-03-16 09:15:51 -0300
 categories: portfolio
 ---

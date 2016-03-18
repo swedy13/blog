@@ -7,7 +7,8 @@ article.portfolio#portfolio
       .portfolio-card
         .portfolio-flipper
           .portfolio-front
-            a(class="portfolio-link" href="{{post.url}}" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})")
+            h3.portfolio-head {{post.title}}
+            a(class="portfolio-link {{post.title}}" href="{{post.url}}" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})")
           a(class="portfolio-back" href="{{post.url}}")
             .portfolio-cap
               h3.portfolio-head {{post.title}}

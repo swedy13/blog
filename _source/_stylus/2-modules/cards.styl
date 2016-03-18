@@ -73,20 +73,34 @@
     .portfolio-head
       z-index 1
       position absolute
-      top 0
+      width 100%
+      bottom -4px
       left 0
       right 0
       padding .5em
-      font-weight 500
-      color #333
+      padding-bottom .75em
+      background-color #111
+      opacity .7
+      font-size 1.2em
+      font-weight 300
+      color white
       text-align center
   
     .portfolio-link
       display block
       height 100%
       width 100%
-      background-size cover
-      background-position top center
+      background-size 375px
+      background-position center
+      background-repeat no-repeat
+
+      &.Wireframing
+        background-size 450px
+        background-position center right
+        
+      &.Mockups
+        background-size 450px
+        background-position center left
   
   // Back
   .portfolio-back

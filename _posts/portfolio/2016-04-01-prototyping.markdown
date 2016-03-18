@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Prototyping"
-thumbnail: prototyping.jpg
+thumbnail: prototyping.png
 date: 2016-03-15 09:15:51 -0600
 categories: portfolio
 excerpt_separator: <!--more-->
