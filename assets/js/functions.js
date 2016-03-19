@@ -27,6 +27,30 @@ $('document').ready(function() {
   }
 });
 
+// NAV HIGHLIGHT
+function navHighlight(linkNum) {
+  $('li').children('div').eq(linkNum).addClass('current-nav');
+}
+
+// NAV HOVER EFFECTS
+function navHover() {
+  // Shows menu
+	$('header').mouseenter(function() {
+		$('.main-nav').find('.nav-link').css('visibility','visible');
+	});
+	$('header').mouseleave(function() {
+		$('.main-nav').find('.nav-link').css('visibility','hidden');
+	});
+
+  // Highlights link
+	$('.nav-links').find('li').mouseenter(function() {
+		$(this).find('.nav-color').addClass('nav-highlight');
+	});
+	$('.nav-links').find('li').mouseleave(function() {
+		$(this).find('.nav-color').removeClass('nav-highlight');
+	});
+};
+
 // PAGE TITLE LOAD ANIMATION
 function pageTitleReveal(selectorName, animationType) {
   var selector = $("." + selectorName);
@@ -49,30 +73,6 @@ function animationEffect(selectorName, animationType, animationSpeed) {
   });
 };
 
-// NAV HOVER EFFECTS
-function navHover() {
-  // Displays the full nav menu on hover
-	$('header').mouseenter(function() {
-		$('.main-nav').find('.nav-link').css('visibility','visible');
-	});
-	$('header').mouseleave(function() {
-		$('.main-nav').find('.nav-link').css('visibility','hidden');
-	});
-
-  // Highlights the currently hovered link
-	$('.nav-links').find('li').mouseenter(function() {
-		$(this).find('.nav-color').addClass('nav-highlight');
-	});
-	$('.nav-links').find('li').mouseleave(function() {
-		$(this).find('.nav-color').removeClass('nav-highlight');
-	});
-};
-
-// NAV HIGHLIGHT
-function navHighlight(linkNum) {
-  $('li').children('div').eq(linkNum).addClass('current-nav');
-}
-
 
 // ------------------------------------------------------
 // ****************  HOME PAGE METHODS  ******************
@@ -80,10 +80,9 @@ function navHighlight(linkNum) {
 function homeMethods() {
   
   $(window).scroll(function() {
-    // WINDOW POSITION
 	  var windowPosition	= $(window).scrollTop();
 
-    // SCROLL EVENT METHOD
+    // Fires events on scroll
     function scrollEvent(selectorName, divisor) {
       var windowOffset = $(selectorName).offset().top;
       var windowHeight = $(window).height();
@@ -94,7 +93,7 @@ function homeMethods() {
       }
     }
 
-    // PARALLAX
+    // Parallax
 		var parallaxWidth		= $('.color-overlay').width();
 		var parallaxHeight	= $('.parallax').height();
 		var viewedParallax	= windowPosition / parallaxHeight;
@@ -108,31 +107,26 @@ function homeMethods() {
 			$('.moon').css('right', -51);
 		}
 
-    // PORTFOLIO
-	  /* function showHomePortfolio() {
-       return scrollEvent('#portfolio', 1.6);
-	     };
-
-       if (showHomePortfolio() == true) { */
+    // Portfolio
     if (scrollEvent('#home-portfolio', 1.6)) {
       pageTitleReveal('portfolio-title', 'zoomIn');
       setTimeout(function() {
         animationEffect('portfolio-card', 'flipInY', 150)
       }, 300);
-      /* setTimeout(function() {
-         $('.portfolio-more')
-         .css('visibility', 'visible')
-         .addClass('animated flipInY');
-         }, 1400); */
+      setTimeout(function() {
+        $('.portfolio-more')
+           .css('visibility', 'visible')
+           .addClass('animated flipInY');
+      }, 1400);
     }
 
-    // COMPANIES
+    // Companies
 	  if ($('#home-companies').offset().top - ($(window).height() / 1.1) < windowPosition) {
       pageTitleReveal('home-companies-title', 'fadeInLeft');
       animationEffect('home-companies-logo-thumb', 'bounceInUp', 150);
 	  }
 
-    // ARTICLES
+    // Articles
 		if ($('#home-articles').offset().top - ($(window).height() / 1.8) < windowPosition) {
       pageTitleReveal('home-articles-title', 'slideInDown');
       setTimeout(function() {
@@ -147,7 +141,8 @@ function homeMethods() {
 // *************  COMPANIES PAGE METHODS  ***************
 // ------------------------------------------------------
 function companiesMethods() {
-  // Companies page functions (title animation, display animation, slider animation)
+
+  // On-load animations
   pageTitleReveal('companies-title', 'zoomIn');
   setTimeout(function() {
     animationEffect('companies-container', 'fadeInRight', 200)
@@ -159,13 +154,12 @@ function companiesMethods() {
 // *************  PORTFOLIO PAGE METHODS  ***************
 // ------------------------------------------------------
 function portfolioMethods() {
-  // Portfolio page (title animation, display animation, card flip animation)
-  $('document').ready(function() {
-    pageTitleReveal('portfolio-title', 'zoomIn');
-    setTimeout(function() {
-      animationEffect('portfolio-card', 'flipInY', 125)
-    }, 300);
-  });
+
+  // On-load animations
+  pageTitleReveal('portfolio-title', 'zoomIn');
+  setTimeout(function() {
+    animationEffect('portfolio-card', 'flipInY', 125)
+  }, 300);
 }
 
 
@@ -173,7 +167,8 @@ function portfolioMethods() {
 // **************  ARTICLES PAGE METHODS  ***************
 // ------------------------------------------------------
 function articlesMethods() {
-  // Fades in the blog posts
+
+  // On-load animations
   setTimeout(function() {
     pageTitleReveal('blog-header', 'zoomIn');
   }, 150);

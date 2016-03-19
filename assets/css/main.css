@@ -4278,7 +4278,6 @@ img {
     width: 100%;
     min-width: 250px;
     background-color: #1c1c1c;
-    border: 2px solid #e1e1e1;
     font-size: 2em;
     font-weight: 300;
     color: #e1e1e1;
@@ -4293,9 +4292,6 @@ img {
   }
   .portfolio-link.portfolio-more {
     visibility: hidden;
-    width: calc(100% - 10px);
-    margin-top: 4px;
-    margin-left: 5px;
   }
   .portfolio-card,
   .portfolio-front,
@@ -4308,7 +4304,6 @@ img {
   .portfolio-card {
     visibility: hidden;
     position: relative;
-    margin: 15px 5px;
     -webkit-perspective: 1000;
             perspective: 1000;
   }
@@ -4340,14 +4335,14 @@ img {
   }
   .portfolio-front .portfolio-head {
     z-index: 1;
+    display: none;
     position: absolute;
     width: 100%;
     bottom: -4px;
     left: 0;
     right: 0;
-    padding: 0.5em;
-    padding-bottom: 0.75em;
-    background-color: #111;
+    padding: 0.5em 0;
+    background-color: #333;
     opacity: 0.7;
     font-size: 1.2em;
     font-weight: 300;
@@ -4358,7 +4353,7 @@ img {
     display: block;
     height: 100%;
     width: 100%;
-    background-size: 375px;
+    background-size: 425px;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -4376,21 +4371,22 @@ img {
   .portfolio-back .portfolio-cap {
     position: absolute;
     top: 0;
-    bottom: -4px;
+    bottom: 0;
     left: 0;
-    right: -4px;
+    right: 0;
     padding: 0.5em;
     background-color: #534e78;
     color: #e1e1e1;
   }
   .portfolio-back .portfolio-cap .portfolio-head {
-    font-size: 1em;
+    margin: 3px 0 12px;
+    font-size: 1.3em;
     text-align: center;
-    font-weight: 500;
+    font-weight: 300;
   }
   .portfolio-back .portfolio-cap .portfolio-divider {
     width: 100%;
-    margin: 6px -3px 5px -3px;
+    margin: 8px -3px;
   }
   .portfolio-back .portfolio-cap .portfolio-description {
     font-size: 0.9em;
@@ -5046,8 +5042,8 @@ img {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 25px 0 5px;
-  background-color: #1c1c1c;
+  padding: 15px 0 0;
+  background-color: #e1e1e1;
 }
 .portfolio .portfolio-title {
   display: none;
@@ -5057,7 +5053,7 @@ img {
   margin: 5px 0 15px;
   font-size: 2em;
   font-weight: 300;
-  color: #ccc;
+  color: #555;
 }
 .portfolio .portfolio-slider {
   display: -webkit-box;
