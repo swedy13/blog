@@ -1,8 +1,8 @@
-section.portfolio#portfolio
+section.portfolio#home-portfolio
   .portfolio-title portfolio
   .portfolio-slider
     // Iterate through portfolio posts to display up to 7 cards
-    |{% for post in site.categories.portfolio limit: 7 %}
+    |{% for post in site.categories.portfolio reversed limit: 7 %}
     .portfolio-container
       .portfolio-card
         .portfolio-flipper

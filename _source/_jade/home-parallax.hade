@@ -1,7 +1,0 @@
-section.about#about
-  .parallax.about
-    //- .mountain
-    //- .fog
-    //- .trees
-    //- .moon
-    .color-overlay

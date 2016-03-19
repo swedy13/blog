@@ -4251,6 +4251,9 @@ img {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -4305,7 +4308,7 @@ img {
   .portfolio-card {
     visibility: hidden;
     position: relative;
-    margin: 5px;
+    margin: 15px 5px;
     -webkit-perspective: 1000;
             perspective: 1000;
   }
@@ -5017,13 +5020,8 @@ img {
   background-color: #eee8aa;
   border: 1px solid #deb887;
 }
-.parallax {
-  z-index: -1;
+.home-parallax .home-parallax-container {
   height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-.parallax.about {
   background-image: url("../img/home/mountain.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -5032,15 +5030,7 @@ img {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
-.parallax.about .moon {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/home/moon.png");
-  background-size: cover;
-  -webkit-filter: contrast(1.5);
-          filter: contrast(1.5);
-}
-.parallax.about .color-overlay {
+.home-parallax .home-parallax-container .home-parallax-color-overlay {
   height: 100%;
   width: 100%;
   background-color: #191970;
