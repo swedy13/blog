@@ -28,27 +28,31 @@ Run "gulp" from the command line.
 ------------------------------------------------
 DataQlick
 - Need: 
-- Process: Page Optimization, Usability Reviews, Web Apps
+- Process: User Feedback, Flow Analysis, Wireframing, Mockups
+- Results:
+Eleven
+- Need:
+- Process: Usability Reviews, Information Architecture, Page Optimization
 - Results: 
 GuruFace
 - Need: 
-- Process: Flow Analysis, Information Architecture, Page Optimization, Site Critiques, Web Apps
+- Process: User Feedback, Flow Analysis, Site Critiques, Information Architecture, Page Optimization, Mockups
 - Results: 
 Mark Swedberg
 - Need: 
-- Process: Interaction Design, Responsive Design, Wireframing
+- Process: Wireframing, Prototyping, Websites & Web Apps, Mobile Sites & Apps
 - Results: 
 Mythros
 - Need: 
-- Process: Information Architecture, Mobile Apps, Prototyping, Responsive Design, Usability Reviews, User Feedback, Web Apps, Wireframing
+- Process: User Feedback, Usability Reviews, Site Critiques, Wireframing, Interaction Design, Prototyping, Websites & Web Apps, Mobile Sites & Apps
 - Results: 
 Pairable
 - Need: 
-- Process: Flow Anlysis, Mobile Apps, Prototyping
+- Process: Flow Anlysis, Prototyping, Mobile Sites & Apps
 - Results: 
 SyntheSys
 - Need: 
-- Process: Information Architecture, User Feedback
+- Process: Usability Reviews, Information Architecture
 - Results:
 
 
@@ -59,7 +63,7 @@ User Feedback
 - Pictures: 
 - Methods: Surveys, Interviews, Focus Groups
 - Tools:  SurveyMonkey, Skype, WebEx, Invision
-- Companies: DataQlick, GuruFace, Mark Swedberg, Mythros, SyntheSys
+- Companies: DataQlick, GuruFace, Mythros
 Flow Analysis
 - Pictures: 
 - Methods: True Intent, Card Sorting, Traffic Flow
@@ -69,7 +73,7 @@ Usability Reviews
 - Pictures: 
 - Methods: Eye Tracking, Usability Benchmarking
 - Tools: 
-- Companies: Mythros
+- Companies: Eleven, Mythros, SyntheSys
 ------------------------------------------------
 
 Site Critiques
@@ -81,12 +85,12 @@ Information Architectrue
 - Pictures: 
 - Methods: Sitemap, Flow Chart
 - Tools: PowerPoint, SlickPlan
-- Companies: GuruFace, Pairable, Mythros, SyntheSys
+- Companies: Eleven, GuruFace, SyntheSys
 Page Optimization
 - Pictures: 
 - Methods: Google Analytics, CrazyEgg, Optimizely
 - Tools: Heatmaps, A/B Split Testing
-- Companies: DataQlick, GuruFace
+- Companies: Eleven, GuruFace
 ------------------------------------------------
 
 Wireframing
@@ -98,29 +102,29 @@ Mockups
 - Pictures: 
 - Methods: Low/High Fidelity, Responsive/Mobile Variants
 - Tools: Photoshop, Illustrator
-- Companies: Pairable, Mark Swedberg, Mythros, SyntheSys
+- Companies: DataQlick, GuruFace, Pairable
 Interaction Design
 - Pictures: 
 - Methods: Page Flow, Interactive Elements, Animated Effects
 - Tools: InVision, Pixate, InDesign
-- Companies: Mark Swedberg, Mythros
+- Companies: Mythros
 ------------------------------------------------
 
 Prototyping
 - Pictures: 
 - Methods: Local Server, Interactive, Page Routing
 - Tools: HTML5, Jade, Handlebars, CSS3, Stylus, JavaScript, JQuery
-- Companies: Mythros, Pairable
+- Companies: Mark Swedberg, Mythros, Pairable
 Websites & Web Apps
 - Pictures: 
 - Methods: Front/Backend Development, Database Queries, Deployment
 - Tools: WordPress, Jekyll, Node.js, Meteor.js, MongoDB, GitHub
-- Companies: Mythros, SyntheSys
-Mobile Apps
+- Companies: Mark Swedberg, Mythros
+Mobile Sites & Apps
 - Pictures: 
 - Methods: 
 - Tools: 
-- Companies: 
+- Companies: Mark Swedberg, Mythros, Pairable
 
 
 ------------------------------------------------
