@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: portfolio
 title: "Prototyping"
 thumbnail: prototyping.png
 date: 2016-03-15 09:15:51 -0600

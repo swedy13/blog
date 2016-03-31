@@ -4,9 +4,9 @@
   |{% for post in site.categories.companies %}
   .companies-container
     .companies-card
-      a(class="companies-picture {{post.title}}" href="{{post.url}}" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})")
+      a(class="companies-picture {{post.title}}" href="{{post.url}}.html" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})")
       .companies-content
         .companies-name {{post.title}}
         .companies-description {{post.excerpt}}
-        a(class="companies-link" href="{{post.url}}") more
+        a(class="companies-link" href="{{post.url}}.html") more
   |{% endfor %}

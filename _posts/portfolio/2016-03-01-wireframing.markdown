@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: portfolio
 title: "Wireframing"
 thumbnail: wireframing.png
 date: 2016-03-01 09:15:51 -0300

@@ -1,4 +1,4 @@
-article.portfolio#portfolio
+article.portfolio#portfolio.portfolio-page
   .portfolio-title portfolio
   .portfolio-slider
     // Iterate through all portfolio posts
@@ -8,8 +8,8 @@ article.portfolio#portfolio
         .portfolio-flipper
           .portfolio-front
             h3.portfolio-head {{post.title}}
-            a(class="portfolio-link {{post.title}}" href="{{post.url}}" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})")
-          a(class="portfolio-back" href="{{post.url}}")
+            a(class="portfolio-link {{post.title}}" href="{{post.url}}.html" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})")
+          a(class="portfolio-back" href="{{post.url}}.html")
             .portfolio-cap
               h3.portfolio-head {{post.title}}
               hr.portfolio-divider

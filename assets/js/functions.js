@@ -95,16 +95,15 @@ function homeMethods() {
 
     // Parallax
 		var parallaxWidth		= $('.color-overlay').width();
-		var parallaxHeight	= $('.parallax').height();
+		var parallaxHeight	= $('.home-parallax').height();
 		var viewedParallax	= windowPosition / parallaxHeight;
-		
+
 		if (viewedParallax < 1) {
 			var parallaxFilters = 'grayscale(' + viewedParallax + ') brightness(' + (1 - viewedParallax / 2) + ')';
 			var parallaxScale = 1 + (viewedParallax * .25);
 			var parallaxOffset = -parallaxScale*50;
-			$('.color-overlay').css({'opacity':(viewedParallax / 2)});
-			$('.parallax.about').css({WebkitFilter: parallaxFilters});
-			$('.moon').css('right', -51);
+			$('.home-parallax-color-overlay').css({'opacity':(viewedParallax / 2)});
+			$('.home-parallax').css({WebkitFilter: parallaxFilters});
 		}
 
     // Portfolio
@@ -141,7 +140,6 @@ function homeMethods() {
 // *************  COMPANIES PAGE METHODS  ***************
 // ------------------------------------------------------
 function companiesMethods() {
-
   // On-load animations
   pageTitleReveal('companies-title', 'zoomIn');
   setTimeout(function() {
@@ -154,7 +152,6 @@ function companiesMethods() {
 // *************  PORTFOLIO PAGE METHODS  ***************
 // ------------------------------------------------------
 function portfolioMethods() {
-
   // On-load animations
   pageTitleReveal('portfolio-title', 'zoomIn');
   setTimeout(function() {
@@ -167,7 +164,6 @@ function portfolioMethods() {
 // **************  ARTICLES PAGE METHODS  ***************
 // ------------------------------------------------------
 function articlesMethods() {
-
   // On-load animations
   setTimeout(function() {
     pageTitleReveal('blog-header', 'zoomIn');

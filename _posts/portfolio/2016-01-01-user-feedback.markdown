@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: portfolio
 title: "User Feedback"
 thumbnail: user-feedback.png
 date: 2016-01-01 09:15:51 -0600

@@ -4,9 +4,9 @@ section.home-articles#home-articles
     ul
       |{% for post in site.categories.articles reversed limit: 3 offset: 2 %}
       li.home-article
-        a(class="home-article-image" href="{{post.url}}" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})")
+        a(class="home-article-image" href="{{post.url}}.html" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})")
         .home-article-content
-          a(class="home-article-title" href="{{post.url}}") {{post.title}}
+          a(class="home-article-title" href="{{post.url}}.html") {{post.title}}
           .home-article-snippet {{post.excerpt}}    
       li.home-article-divider
         hr

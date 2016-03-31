@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: company
 title: "Eleven"
 thumbnail: eleven.png
 date: 2011-06-01 09:15:51 -0300
