@@ -1,5 +1,5 @@
 ---
-layout: company
+layout: case
 title: "DataQlick"
 thumbnail: dataqlick.png
 date: 2016-01-01 09:15:51 -0300

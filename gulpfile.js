@@ -1,5 +1,6 @@
 var gulp				= require('gulp');
 var browserSync = require('browser-sync');
+var flatten     = require('gulp-flatten');
 var stylus			= require('gulp-stylus');
 var prefix			= require('gulp-autoprefixer');
 var jade				= require('gulp-jade');
@@ -30,13 +31,14 @@ gulp.task('build-site-files', function(callback) {
 
 // SOURCE CODE CONVERSION
 gulp.task('jade-to-html', function() {
-	return gulp.src('_source/_jade/*.jade')
-		.pipe(jade())
+	return gulp.src('_source/**/*.jade')
+    .pipe(jade())
+    .pipe(flatten())
 		.pipe(gulp.dest('_includes'));
 });
 
 gulp.task('stylus-to-css', function() {
-	return gulp.src('_source/_stylus/main.styl')
+	return gulp.src('_source/main.styl')
 		.pipe(stylus({
 			includePaths: ['css'],
 			onError: browserSync.notify
@@ -91,10 +93,10 @@ gulp.task('launch-the-server', function(callback) {
 
 gulp.task('watch-for-changes', function() {
 	// Jade & HTML
-  gulp.watch('_source/_jade/*.jade', ['jade-to-html']);
+  gulp.watch('_source/**/*.jade', ['jade-to-html']);
   gulp.watch(['index.html', '_layouts/*.html', '_includes/*'], ['reload-and-refresh']);
 	// Stylus & CSS
-  gulp.watch('_source/_stylus/**', ['stylus-to-css']);
+  gulp.watch('_source/**/*.styl', ['stylus-to-css']);
 	gulp.watch('assets/css/**',	['move-css']);
 	// JavaScript
   gulp.watch('assets/js/**', ['move-js']);

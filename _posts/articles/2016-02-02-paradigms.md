@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 title: "Paradigms"
 thumbnail: pairable.png
 date: 2016-02-02 09:15:51 -0300

@@ -1,5 +1,5 @@
 ---
-layout: company
+layout: case
 title: "Eleven"
 thumbnail: eleven.png
 date: 2011-06-01 09:15:51 -0300

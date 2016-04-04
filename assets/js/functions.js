@@ -4,6 +4,7 @@
 // PAGE IDENTIFIER
 // This function runs the rest of the methods on this page
 $('document').ready(function() {
+  navScroll();
   navHover();
   
   if ($('div').hasClass('home')) {
@@ -18,12 +19,12 @@ $('document').ready(function() {
     portfolioMethods();
     navHighlight(2);
   }
-  else if ($('div').hasClass('blog')) {
+  else if ($('div').hasClass('articles-page')) {
     articlesMethods();
     navHighlight(3);
   }
   else {
-    console.log('Page identifier error');
+    navHighlight();
   }
 });
 
@@ -33,15 +34,7 @@ function navHighlight(linkNum) {
 }
 
 // NAV HOVER EFFECTS
-function navHover() {
-  // Shows menu
-	$('header').mouseenter(function() {
-		$('.main-nav').find('.nav-link').css('visibility','visible');
-	});
-	$('header').mouseleave(function() {
-		$('.main-nav').find('.nav-link').css('visibility','hidden');
-	});
-
+function navHover() {  
   // Highlights link
 	$('.nav-links').find('li').mouseenter(function() {
 		$(this).find('.nav-color').addClass('nav-highlight');
@@ -50,6 +43,22 @@ function navHover() {
 		$(this).find('.nav-color').removeClass('nav-highlight');
 	});
 };
+
+// NAV SCROLL
+function navScroll() {
+  $(window).scroll(function() {
+	  var windowPosition	= $(window).scrollTop();
+    var header = $('.site-header');
+
+    if (windowPosition > 5) {
+      header.addClass('invisible');
+    }
+    
+    if (windowPosition < 5) {
+      header.removeClass('invisible');
+    }
+  });
+}
 
 // PAGE TITLE LOAD ANIMATION
 function pageTitleReveal(selectorName, animationType) {
@@ -106,7 +115,7 @@ function homeMethods() {
 			$('.home-parallax').css({WebkitFilter: parallaxFilters});
 		}
 
-    // Portfolio
+    // Services
     if (scrollEvent('#home-portfolio', 1.6)) {
       pageTitleReveal('portfolio-title', 'zoomIn');
       setTimeout(function() {
@@ -149,7 +158,7 @@ function companiesMethods() {
 
 
 // ------------------------------------------------------
-// *************  PORTFOLIO PAGE METHODS  ***************
+// *************  SERVICES PAGE METHODS  ***************
 // ------------------------------------------------------
 function portfolioMethods() {
   // On-load animations
@@ -166,9 +175,9 @@ function portfolioMethods() {
 function articlesMethods() {
   // On-load animations
   setTimeout(function() {
-    pageTitleReveal('blog-header', 'zoomIn');
+    pageTitleReveal('articles-title', 'zoomIn');
   }, 150);
   setTimeout(function() {
-    animationEffect('blog-post', 'fadeInUp', 150);
+    animationEffect('post', 'fadeInUp', 150);
   }, 750);
 }
