@@ -95,7 +95,7 @@ Page Optimization
 
 Wireframing
 - Pictures: 
-- Methods: 
+- Methods: Sketches, Mockups, Interactive
 - Tools: InDesign, Photoshop, UXPin
 - Companies: DataQlick, Mark Swedberg, Mythros
 Mockups

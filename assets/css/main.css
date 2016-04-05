@@ -4060,16 +4060,13 @@ h3,
 h4,
 h5,
 p,
-ul,
-ol,
 blockquote,
 figure,
 button {
   margin: 0;
   padding: 0;
 }
-main,
-li {
+main {
   display: block;
 }
 h1,
@@ -4181,6 +4178,9 @@ header.site-header.invisible:hover .nav-link {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
   }
   .main-nav ul.nav-links li .nav-color {
     height: 7px;
@@ -4442,6 +4442,12 @@ header.site-header.invisible:hover .nav-link {
 .home-articles .home-articles-container .home-article .home-article-content .home-article-snippet {
   margin-top: 7px;
 }
+.home-articles .home-articles-container .home-article .home-article-content .home-article-snippet p {
+  line-height: 1.5;
+}
+.home-articles .home-articles-container .home-article .home-article-content .home-article-snippet a {
+  color: #6495ed;
+}
 .home-articles .home-articles-container .home-article:hover .home-article-image {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
@@ -4458,7 +4464,10 @@ header.site-header.invisible:hover .nav-link {
   border: none;
   border-top: 2px dashed #d3d3d3;
 }
-.home-articles .home-articles-container li:last-child {
+.home-articles .home-articles-container ul {
+  list-style: none;
+}
+.home-articles .home-articles-container ul li:last-child {
   display: none;
 }
 .home-articles .home-articles-container .home-articles-more {
@@ -4754,7 +4763,7 @@ article.post .post-container .post-content a.post-title h1 {
 }
 .article-page .article {
   width: 700px;
-  margin-top: 60px;
+  margin: 60px 0 40px;
 }
 .article-page .article header.article-header {
   margin-bottom: 15px;
@@ -4763,17 +4772,6 @@ article.post .post-container .post-content a.post-title h1 {
   text-align: center;
   font-size: 2.5em;
   font-weight: 300;
-}
-.article-page .article header.article-header h1.article-title.note {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 7px;
-  background-color: #eee8aa;
-  border: 1px solid #deb887;
-  line-height: 1.5;
-  color: #555;
 }
 .article-page .article .article-hero {
   display: block;
@@ -4802,10 +4800,79 @@ article.post .post-container .post-content a.post-title h1 {
 .article-page .article .article-content {
   width: 100%;
 }
+.article-page .article .article-content h2 {
+  width: 100%;
+  background-color: #e1e1e1;
+  margin: 50px 0 15px;
+  padding: 10px 0;
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #777;
+}
+.article-page .article .article-content strong {
+  font-weight: 500;
+  color: #000;
+}
+.article-page .article .article-content p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.article-page .article .article-content .note {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 7px;
+  background-color: #eee8aa;
+  border: 1px solid #deb887;
+  color: #555;
+}
+.article-page .article .article-content .break {
+  margin: 40px 0 15px;
+  font-style: italic;
+}
+.article-page .article .article-content a {
+  color: #6495ed;
+}
+.article-page .article .article-content ul,
+.article-page .article .article-content ol {
+  margin: 15px;
+  padding-left: 25px;
+}
+.article-page .article .article-content ul li,
+.article-page .article .article-content ol li {
+  line-height: 1.5;
+  margin-bottom: 7px;
+  color: #808080;
+}
+.article-page .article .article-content ul li p,
+.article-page .article .article-content ol li p {
+  color: #000;
+}
 .article-page .article .article-content table.tools {
   width: 100%;
 }
-.article-page .article .article-content table.tools tbody tr {
+.article-page .article .article-content table.highlight {
+  padding: 0;
+}
+.article-page .article .article-content table.highlight tbody tr td {
+  padding: 24px 0;
+  background-color: #f0e68c;
+}
+.article-page .article .article-content table.highlight tbody tr td img {
+  -webkit-filter: grayscale(1) brightness(0.5);
+          filter: grayscale(1) brightness(0.5);
+}
+.article-page .article .article-content table.highlight tbody tr td:hover img {
+  -webkit-filter: grayscale(0) brightness(1);
+          filter: grayscale(0) brightness(1);
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+.article-page .article .article-content table tbody tr {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4815,18 +4882,26 @@ article.post .post-container .post-content a.post-title h1 {
           justify-content: space-around;
   margin-bottom: 50px;
 }
-.article-page .article .article-content table.tools tbody tr th {
+.article-page .article .article-content table tbody tr th {
   width: 100%;
-  background-color: #e1e1e1;
   margin-bottom: 10px;
   padding: 10px 0;
-  font-size: 1.1em;
-  font-weight: 500;
-  color: #555;
+  background-color: #e1e1e1;
   border: 1px solid #d6d6d6;
   border-radius: 3px;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #555;
 }
-.article-page .article .article-content table.tools tbody tr td {
+.article-page .article .article-content table tbody tr th.plain {
+  margin-bottom: 5px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 1.3em;
+  text-align: left;
+}
+.article-page .article .article-content table tbody tr td {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4843,12 +4918,12 @@ article.post .post-container .post-content a.post-title h1 {
   width: 33%;
   margin-top: -50px;
 }
-.article-page .article .article-content table.tools tbody tr td:hover img {
+.article-page .article .article-content table tbody tr td:hover img {
   opacity: 1;
   -webkit-filter: grayscale(0) drop-shadow(0 2px 1px #999);
           filter: grayscale(0) drop-shadow(0 2px 1px #999);
 }
-.article-page .article .article-content table.tools tbody tr td img {
+.article-page .article .article-content table tbody tr td img {
   height: 75px;
   width: 75px;
   opacity: 0.7;
@@ -4857,9 +4932,10 @@ article.post .post-container .post-content a.post-title h1 {
   -webkit-transition: 0.4s;
           transition: 0.4s;
 }
-.article-page .article .article-content table.tools tbody tr td p {
+.article-page .article .article-content table tbody tr td p {
   margin: 10px 0;
   color: #555;
+  text-align: center;
 }
 .companies-page {
   display: -webkit-box;
