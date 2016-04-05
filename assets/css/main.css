@@ -4748,7 +4748,7 @@ article.post .post-container .post-content a.post-title h1 {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   width: 100%;
   background-color: #fff;
 }
@@ -4764,6 +4764,17 @@ article.post .post-container .post-content a.post-title h1 {
   font-size: 2.5em;
   font-weight: 300;
 }
+.article-page .article header.article-header h1.article-title.note {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 7px;
+  background-color: #eee8aa;
+  border: 1px solid #deb887;
+  line-height: 1.5;
+  color: #555;
+}
 .article-page .article .article-hero {
   display: block;
   -webkit-box-pack: center;
@@ -4772,13 +4783,83 @@ article.post .post-container .post-content a.post-title h1 {
           justify-content: center;
   height: 300px;
   width: 100%;
-  margin: 0 0 25px;
+  margin: 0 0 5px;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
+  border-radius: 10px;
+}
+.article-page .article .article-hero.Tools {
+  background-size: contain;
+  background-position: top left;
+  background-repeat: repeat;
+}
+.article-page .article .article-hero.Process {
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
 }
 .article-page .article .article-content {
-  width: 80%;
+  width: 100%;
+}
+.article-page .article .article-content table.tools {
+  width: 100%;
+}
+.article-page .article .article-content table.tools tbody tr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin-bottom: 50px;
+}
+.article-page .article .article-content table.tools tbody tr th {
+  width: 100%;
+  background-color: #e1e1e1;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #555;
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
+}
+.article-page .article .article-content table.tools tbody tr td {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 33%;
+  margin-top: -50px;
+}
+.article-page .article .article-content table.tools tbody tr td:hover img {
+  opacity: 1;
+  -webkit-filter: grayscale(0) drop-shadow(0 2px 1px #999);
+          filter: grayscale(0) drop-shadow(0 2px 1px #999);
+}
+.article-page .article .article-content table.tools tbody tr td img {
+  height: 75px;
+  width: 75px;
+  opacity: 0.7;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
+}
+.article-page .article .article-content table.tools tbody tr td p {
+  margin: 10px 0;
+  color: #555;
 }
 .companies-page {
   display: -webkit-box;

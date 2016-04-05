@@ -62,7 +62,7 @@ SyntheSys
 User Feedback
 - Pictures: 
 - Methods: Surveys, Interviews, Focus Groups
-- Tools:  SurveyMonkey, Skype, WebEx, Invision
+- Tools:  SurveyMonkey, Skype, WebEx
 - Companies: DataQlick, GuruFace, Mythros
 Flow Analysis
 - Pictures: 
@@ -72,14 +72,14 @@ Flow Analysis
 Usability Reviews
 - Pictures: 
 - Methods: Eye Tracking, Usability Benchmarking
-- Tools: 
+- Tools: Invision
 - Companies: Eleven, Mythros, SyntheSys
 ------------------------------------------------
 
 Site Critiques
 - Pictures: 
 - Methods: Screenshots, Markup, Documentation
-- Tools: Paint, Photoshop, Word, GDocs
+- Tools: Photoshop, Word, GDocs
 - Companies: GuruFace, Mythros
 Information Architectrue
 - Pictures: 
@@ -88,8 +88,8 @@ Information Architectrue
 - Companies: Eleven, GuruFace, SyntheSys
 Page Optimization
 - Pictures: 
-- Methods: Google Analytics, CrazyEgg, Optimizely
-- Tools: Heatmaps, A/B Split Testing
+- Methods: Heatmaps, A/B Split Testing
+- Tools: Google Analytics, CrazyEgg, Optimizely
 - Companies: Eleven, GuruFace
 ------------------------------------------------
 
