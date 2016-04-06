@@ -28,7 +28,7 @@ Run "gulp" from the command line.
 ------------------------------------------------
 DataQlick
 - Need: 
-- Process: User Feedback, Flow Analysis, Wireframing, Mockups
+- Process: Site Critique, Wireframing, Mockups
 - Results:
 Eleven
 - Need:

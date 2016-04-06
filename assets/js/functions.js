@@ -124,7 +124,7 @@ function homeMethods() {
       setTimeout(function() {
         $('.portfolio-more')
            .css('visibility', 'visible')
-           .addClass('animated flipInY');
+           .addClass('animated fadeIn');
       }, 1400);
     }
 

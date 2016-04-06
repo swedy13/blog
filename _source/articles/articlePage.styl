@@ -100,14 +100,15 @@
             tr
               td
                 padding 24px 0
-                background-color khaki
+                background-color lightgoldenrodyellow
 
                 img
+                  margin 0px
                   filter grayscale(1) brightness(.5)
 
                 &:hover
                   img
-                    filter grayscale(0) brightness(1)
+                    filter grayscale(0) brightness(1) drop-shadow(0 2px 1px #999)
                     transition .3s
 
         tbody
@@ -142,6 +143,10 @@
               width 33%
               margin-top -50px
 
+              &.description
+                width 100%
+                line-height 1.5
+
               &:hover
                 img
                   opacity 1
@@ -150,6 +155,8 @@
               img
                 height 75px
                 width 75px
+                margin-top 25px
+                margin-bottom 12px
                 opacity .7
                 filter grayscale(1)
                 transition .4s
