@@ -1,8 +1,13 @@
 div(class="company" itemscope itemtype="http://schema.org/BlogPosting") 
   div.companies-slider
+    <a class="iterator backward">&#10094;</a>
+
     |{% for image in page.images %}
-    //- div(class='company-hero {{page.images.title}}' style="background-image: url({{image.url}})")
-    img(class='company-hero {{page.images.title}}' src="{{image.url}}")
-    h1.company-title {{page.title}}
-    div(class='company-content' itemprop='articleBody') {{content}}
+    .slide
+      div(class='company-hero {{page.images.title}}' style="background-image: url({{image.url}})")
+      .company-content
+        h1.company-title {{image.alt}}
+        div(class='company-description' itemprop='articleBody') {{image.title}}
     |{% endfor %}
+    
+    <a class="iterator forward">&#10095;</a>

@@ -4,74 +4,37 @@ title: "DataQlick"
 thumbnail: dataqlick.png
 date: 2016-01-01 09:15:51 -0300
 categories: case_studies
-slides: simple
 
 images:
   - url: /assets/img/companies/dataqlick/DashOriginal.png
-    alt: DataQlick Original Dashboard
-    title: Original Dashboard
+    alt: DataQlick - Original Dashboard
+    title: I was asked to perform a redesign of the website dashboard
     
   - url: /assets/img/companies/dataqlick/DashCritique.png
-    alt: DataQlick Dashboard Critique
-    title: Dashboard Critique
+    alt: DataQlick - Dashboard Critique
+    title: Page analysis indicated several areas that could be improved
 
   - url: /assets/img/companies/dataqlick/DashWireframe.png
-    alt: DataQlick Dashboard Wireframe
-    title: Dashboard Wireframe
+    alt: DataQlick - Dashboard Wireframe
+    title: Sketches of a new dashboard layout
 
   - url: /assets/img/companies/dataqlick/DashMockup.png
-    alt: DataQlick Dashboard Mockup
-    title: Dashboard Mockup
+    alt: DataQlick - Dashboard Mockup
+    title: A low fidelity mockup of the redesigned dashboard
 
   - url: /assets/img/companies/dataqlick/InvOriginal.png
-    alt: DataQlick Original Inventory
-    title: Original Inventory
+    alt: DataQlick - Original Inventory
+    title: Next I was asked to clean up the inventory page
     
   - url: /assets/img/companies/dataqlick/InvCritique.png
-    alt: DataQlick Inventory Critique
-    title: Inventory Critique
+    alt: DataQlick - Inventory Critique
+    title: Priority #1 was to declutter the interface
 
   - url: /assets/img/companies/dataqlick/InvWireframe.png
-    alt: DataQlick Inventory Wireframe
-    title: Inventory Wireframe
+    alt: DataQlick - Inventory Wireframe
+    title: The filtering and ordering mechanisms were consolidated into a cleaner layout
 
   - url: /assets/img/companies/dataqlick/InvMockup.png
-    alt: DataQlick Inventory Mockup
-    title: Inventory Mockup
+    alt: DataQlick - Inventory Mockup
+    title: And rendered into a usable interface mockup
 ---
-
-{% slide %}
-
-## Resque Bus
-
-### Brian Leonard
-
-##### TaskRabbit
-##### 02/17/2014
-
-{% notes %}
-
-Hi, my name is Brian Leonard and I'm the Chief Architect and Technical Cofounder of TaskRabbit. TaskRabbit is a marketplace where neighbors help neighbors get things done.
-
-At TaskRabbit we are using Redis and Resque to do all of our background processing. We've also gone one step further to use these tools to create an asynchronous message bus system that we call Resque Bus.
-
-{% slide %}
-
-### Redis
-
-* Key/Value Store
-* Atomic Operations
-
-![Redis Logo](/images/posts/resque-bus-presentation/redis-logo.jpeg)
-
-{% notes %}
-
-I don't have to tell you guys about Redis, but for our purposes the main point is that we can store stuff in it and the operations are atomic.
-
-{% slide %}
-
-## Thanks!
-
-Questions?
-
-{% endslide %}

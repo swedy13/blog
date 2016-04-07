@@ -6,25 +6,35 @@
 $('document').ready(function() {
   navScroll();
   navHover();
-  
+
+  // HOME PAGE
   if ($('div').hasClass('home')) {
     homeMethods();
     navHighlight(0);
   }
+
+  // COMPANY FEED
   else if ($('div').hasClass('companies-page')) {
     companiesMethods();
     navHighlight(1);
   }
+
+  // COMPANY PAGE
+  else if ($('div').hasClass('company')) {
+    companySlider();
+    navHighlight(1);
+  }
+
+  // PORTFOLIO FEED
   else if ($('div').hasClass('portfolio-page')) {
     portfolioMethods();
     navHighlight(2);
   }
+
+  // ARTICLE FEED
   else if ($('div').hasClass('articles-page')) {
     articlesMethods();
     navHighlight(3);
-  }
-  else {
-    navHighlight();
   }
 });
 
@@ -154,6 +164,30 @@ function companiesMethods() {
   setTimeout(function() {
     animationEffect('companies-container', 'fadeInRight', 200)
   }, 450);
+}
+
+function companySlider(n) {
+  var slides = $('.slide');
+  var position = 1;
+  changeSlide(position);
+
+  $('.backward').click(function() {
+    changeSlide(position -= 1);
+  });
+  $('.forward').click(function() {
+    changeSlide(position += 1);
+  });
+  
+  function changeSlide(currentPosition) {
+    if (currentPosition > slides.length) {position = 1}
+    if (currentPosition < 1) {position = slides.length}
+
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
+    }
+
+    slides[position-1].style.display = 'block';
+  }
 }
 
 

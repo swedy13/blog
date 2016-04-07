@@ -1,12 +1,49 @@
 .company
-  height 100vh
-  width 100%
   overflow hidden
-  background-color #222
-
+  background-color cadetblue
+  width 100%
+  
   .companies-slider
     display flex
-    padding 60px 30px
+    align-items center
+    justify-content center
+    height 100vh
+    width 100%
 
-    .company-hero
-      height 90vh
+    .iterator
+      height 20px
+      width 20px
+      background-color white
+      border-radius 100%
+
+    .slide
+      display none
+      height 78vh
+      width 100%
+
+      .company-hero
+        height 69vh
+        background-size contain
+        background-position center
+        background-repeat no-repeat
+        border-radius 3px
+        filter drop-shadow(0 3px 7px #333)
+
+      .company-content
+        z-index 100
+        position absolute
+        bottom 0
+        left 0
+        right 0
+        height 10vh
+        padding 12px
+        background-color rgba(0,0,0,.7)
+        color #ccc
+
+        .company-title
+          font-size 1.5em
+          font-weight 300
+          margin-bottom 10px
+
+        .company-description
+          font-size 1em
