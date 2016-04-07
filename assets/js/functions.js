@@ -21,7 +21,10 @@ $('document').ready(function() {
 
   // COMPANY PAGE
   else if ($('div').hasClass('company')) {
+    slideLoad();
     companySlider();
+    slideAnimation();
+    toggleImage();
     navHighlight(1);
   }
 
@@ -166,28 +169,69 @@ function companiesMethods() {
   }, 450);
 }
 
-function companySlider(n) {
+function slideLoad() {
+  $('.company-hero').css('opacity', '0').animate({opacity: 1}, 1500);
+}
+
+function companySlider() {
   var slides = $('.slide');
   var position = 1;
   changeSlide(position);
 
   $('.backward').click(function() {
     changeSlide(position -= 1);
+    slideAnimation('fadeInLeft');
   });
   $('.forward').click(function() {
     changeSlide(position += 1);
+    slideAnimation('fadeInRight');
   });
-  
+
+  $('body').keydown(function(e) {
+    if (e.keyCode == 37) {
+      changeSlide(position -= 1);
+      slideAnimation('fadeInLeft');
+    }
+    else if (e.keyCode == 39) {
+      changeSlide(position += 1);
+      slideAnimation('fadeInRight');
+    }
+  });
+
   function changeSlide(currentPosition) {
     if (currentPosition > slides.length) {position = 1}
     if (currentPosition < 1) {position = slides.length}
 
     for (var i = 0; i < slides.length; i++) {
-      slides[i].style.display = 'none';
+      slides[i].classList.remove('visible');
     }
 
-    slides[position-1].style.display = 'block';
+    var adjustedSlide = slides[position-1];
+    adjustedSlide.classList.add('visible');
+    
+    $('.slider-position').html(position + ' / ' + slides.length);
   }
+}
+
+function slideAnimation(animation) {
+  var image = $('.visible').find('.company-hero');  
+  image.removeClass('fadeInLeft fadeInRight');
+  image.addClass(animation);
+}
+
+function toggleImage() {
+  $('.company-hero').click(function() {
+    $('.slide').toggleClass('zoom');
+  });
+  $('body').keydown(function(e) {
+    if (e.keyCode == 27) {
+      $('.slide').removeClass('zoom');      
+    }
+  });
+  $('.exit-view').click(function(e) {
+    e.stopPropagation();
+    $('.slide').removeClass('zoom');
+  });
 }
 
 

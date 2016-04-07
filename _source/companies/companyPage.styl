@@ -11,15 +11,44 @@
     width 100%
 
     .iterator
-      height 20px
-      width 20px
-      background-color white
+      height 50px
+      margin 30px
       border-radius 100%
+      font-size 3em
+      color white
+      cursor pointer
 
     .slide
       display none
       height 78vh
       width 100%
+
+      &.visible
+        display block
+
+      &.zoom
+        z-index 1
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        right 0
+        height 100%
+        width 100%
+        background-color rgba(0,0,0,.8)
+        transition background-color .15s
+
+        .company-hero
+          height 80vh
+          margin-top 5vh
+
+          .exit-view
+            display block
+            position absolute
+            top 1vh
+            right 1vw
+            font-size 3em
+            color white
 
       .company-hero
         height 69vh
@@ -29,8 +58,13 @@
         border-radius 3px
         filter drop-shadow(0 3px 7px #333)
 
+        .exit-view
+          display none
+
       .company-content
         z-index 100
+        display flex
+        justify-content space-between
         position absolute
         bottom 0
         left 0
@@ -40,10 +74,39 @@
         background-color rgba(0,0,0,.7)
         color #ccc
 
-        .company-title
-          font-size 1.5em
-          font-weight 300
-          margin-bottom 10px
+        .left
+          .company-title
+            font-size 1.5em
+            font-weight 300
+            margin-bottom 15px
+  
+          .company-description
+            font-size 1em
 
-        .company-description
-          font-size 1em
+        .right
+          .slider-position
+            display flex
+            flex-direction row-reverse
+            margin-bottom 15px
+            margin-right 10px
+            font-size 1.5em
+            font-weight 300
+
+          .tools
+            display flex
+            align-items center
+
+            img
+              opacity .7
+              height 25px
+              width 25px
+              margin 0 5px
+              filter grayscale(1) brightness(1.5)
+              transition .25s
+
+              &:hover
+                height 35px
+                width 35px
+                margin -5px 0
+                opacity 1
+                filter grayscale(0) brightness(1) 

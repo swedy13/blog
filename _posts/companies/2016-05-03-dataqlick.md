@@ -38,3 +38,12 @@ images:
     alt: DataQlick - Inventory Mockup
     title: And rendered into a usable interface mockup
 ---
+
+<table class="tools">
+<td><img alt="Microsoft Word" src="/assets/img/tools/msword.png"/></td>
+<td><img alt="Google Docs"    src="/assets/img/tools/googledocs.png"/></td>
+<td><img alt="UXPin"          src="/assets/img/tools/uxpin.png"/></td>
+<td><img alt="InDesign"       src="/assets/img/tools/indesign.png"/></td>
+<td><img alt="Illustrator"    src="/assets/img/tools/illustrator.png"/></td>
+<td><img alt="Photoshop"      src="/assets/img/tools/photoshop.png"/></td>
+</table>

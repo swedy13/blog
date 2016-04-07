@@ -5105,15 +5105,45 @@ article.post .post-container .post-content a.post-title h1 {
   width: 100%;
 }
 .company .companies-slider .iterator {
-  height: 20px;
-  width: 20px;
-  background-color: #fff;
+  height: 50px;
+  margin: 30px;
   border-radius: 100%;
+  font-size: 3em;
+  color: #fff;
+  cursor: pointer;
 }
 .company .companies-slider .slide {
   display: none;
   height: 78vh;
   width: 100%;
+}
+.company .companies-slider .slide.visible {
+  display: block;
+}
+.company .companies-slider .slide.zoom {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  -webkit-transition: background-color 0.15s;
+          transition: background-color 0.15s;
+}
+.company .companies-slider .slide.zoom .company-hero {
+  height: 80vh;
+  margin-top: 5vh;
+}
+.company .companies-slider .slide.zoom .company-hero .exit-view {
+  display: block;
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+  font-size: 3em;
+  color: #fff;
 }
 .company .companies-slider .slide .company-hero {
   height: 69vh;
@@ -5124,8 +5154,19 @@ article.post .post-container .post-content a.post-title h1 {
   -webkit-filter: drop-shadow(0 3px 7px #333);
           filter: drop-shadow(0 3px 7px #333);
 }
+.company .companies-slider .slide .company-hero .exit-view {
+  display: none;
+}
 .company .companies-slider .slide .company-content {
   z-index: 100;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -5135,13 +5176,56 @@ article.post .post-container .post-content a.post-title h1 {
   background-color: rgba(0,0,0,0.7);
   color: #ccc;
 }
-.company .companies-slider .slide .company-content .company-title {
+.company .companies-slider .slide .company-content .left .company-title {
   font-size: 1.5em;
   font-weight: 300;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
-.company .companies-slider .slide .company-content .company-description {
+.company .companies-slider .slide .company-content .left .company-description {
   font-size: 1em;
+}
+.company .companies-slider .slide .company-content .right .slider-position {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+.company .companies-slider .slide .company-content .right .tools {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.company .companies-slider .slide .company-content .right .tools img {
+  opacity: 0.7;
+  height: 25px;
+  width: 25px;
+  margin: 0 5px;
+  -webkit-filter: grayscale(1) brightness(1.5);
+          filter: grayscale(1) brightness(1.5);
+  -webkit-transition: 0.25s;
+          transition: 0.25s;
+}
+.company .companies-slider .slide .company-content .right .tools img:hover {
+  height: 35px;
+  width: 35px;
+  margin: -5px 0;
+  opacity: 1;
+  -webkit-filter: grayscale(0) brightness(1);
+          filter: grayscale(0) brightness(1);
 }
 @media screen and (min-width: 548px) {
   .portfolio-container {
