@@ -12,7 +12,7 @@ images:
     
   - url: /assets/img/companies/dataqlick/InvCritique.png
     alt: DataQlick - Inventory Critique
-    title: Priority #1 was to declutter the interface
+    title: The top priority was to declutter the interface
 ---
 
 Hello world, I'm the prototyping post...'

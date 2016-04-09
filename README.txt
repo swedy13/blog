@@ -36,7 +36,7 @@ Eleven
 - Results: 
 GuruFace
 - Need: 
-- Process: User Feedback, Flow Analysis, Site Critiques, Information Architecture, Page Optimization, Mockups
+- Process: Flow Analysis, Site Critiques, Information Architecture, Page Optimization, Mockups
 - Results: 
 Mark Swedberg
 - Need: 
