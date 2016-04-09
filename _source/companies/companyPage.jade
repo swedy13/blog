@@ -1,11 +1,11 @@
-div(class="company" itemscope itemtype="http://schema.org/BlogPosting") 
+div(id="{{page.categories}}" class="company" itemscope itemtype="http://schema.org/BlogPosting") 
   div.companies-slider
     <a class="iterator backward">&#10094;</a>
 
     |{% for image in page.images %}
     .slide
       div(class='company-hero animated' style="background-image: url({{image.url}})")
-        p.exit-view x
+      p.exit-view x
       .company-content
         .left
           h1.company-title {{image.alt}}

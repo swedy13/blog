@@ -5112,6 +5112,9 @@ article.post .post-container .post-content a.post-title h1 {
   color: #fff;
   cursor: pointer;
 }
+.company .companies-slider .iterator.zoom {
+  display: none;
+}
 .company .companies-slider .slide {
   display: none;
   height: 78vh;
@@ -5137,13 +5140,14 @@ article.post .post-container .post-content a.post-title h1 {
   height: 80vh;
   margin-top: 5vh;
 }
-.company .companies-slider .slide.zoom .company-hero .exit-view {
+.company .companies-slider .slide.zoom .exit-view {
   display: block;
   position: absolute;
   top: 1vh;
   right: 1vw;
   font-size: 3em;
   color: #fff;
+  cursor: pointer;
 }
 .company .companies-slider .slide .company-hero {
   height: 69vh;
@@ -5154,7 +5158,7 @@ article.post .post-container .post-content a.post-title h1 {
   -webkit-filter: drop-shadow(0 3px 7px #333);
           filter: drop-shadow(0 3px 7px #333);
 }
-.company .companies-slider .slide .company-hero .exit-view {
+.company .companies-slider .slide .exit-view {
   display: none;
 }
 .company .companies-slider .slide .company-content {

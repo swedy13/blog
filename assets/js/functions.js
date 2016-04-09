@@ -25,7 +25,13 @@ $('document').ready(function() {
     companySlider();
     slideAnimation();
     toggleImage();
-    navHighlight(1);
+
+    if ($('div.company').attr('id') == 'case_studies') {
+      navHighlight(1);
+    }
+    else {
+      navHighlight(2);    
+    }
   }
 
   // PORTFOLIO FEED
@@ -33,7 +39,7 @@ $('document').ready(function() {
     portfolioMethods();
     navHighlight(2);
   }
-
+  
   // ARTICLE FEED
   else if ($('div').hasClass('articles-page')) {
     articlesMethods();
@@ -159,7 +165,7 @@ function homeMethods() {
 
 
 // ------------------------------------------------------
-// *************  COMPANIES PAGE METHODS  ***************
+// *************  COMPANIES FEED METHODS  ***************
 // ------------------------------------------------------
 function companiesMethods() {
   // On-load animations
@@ -169,6 +175,10 @@ function companiesMethods() {
   }, 450);
 }
 
+
+// ------------------------------------------------------
+// *************  COMPANIES FEED METHODS  ***************
+// ------------------------------------------------------
 function slideLoad() {
   $('.company-hero').css('opacity', '0').animate({opacity: 1}, 1500);
 }
@@ -222,21 +232,24 @@ function slideAnimation(animation) {
 function toggleImage() {
   $('.company-hero').click(function() {
     $('.slide').toggleClass('zoom');
+    $('.iterator').toggleClass('zoom');
   });
   $('body').keydown(function(e) {
     if (e.keyCode == 27) {
       $('.slide').removeClass('zoom');      
+      $('.iterator').removeClass('zoom');
     }
   });
   $('.exit-view').click(function(e) {
     e.stopPropagation();
     $('.slide').removeClass('zoom');
+    $('.iterator').removeClass('zoom');
   });
 }
 
 
 // ------------------------------------------------------
-// *************  SERVICES PAGE METHODS  ***************
+// *************  PORTFOLIO FEED METHODS  ***************
 // ------------------------------------------------------
 function portfolioMethods() {
   // On-load animations
@@ -248,7 +261,7 @@ function portfolioMethods() {
 
 
 // ------------------------------------------------------
-// **************  ARTICLES PAGE METHODS  ***************
+// **************  ARTICLES FEED METHODS  ***************
 // ------------------------------------------------------
 function articlesMethods() {
   // On-load animations
@@ -256,6 +269,6 @@ function articlesMethods() {
     pageTitleReveal('articles-title', 'zoomIn');
   }, 150);
   setTimeout(function() {
-    animationEffect('post', 'fadeInUp', 150);
+    animationEffect('post', 'fadeInUp', 350);
   }, 750);
 }

@@ -18,6 +18,9 @@
       color white
       cursor pointer
 
+      &.zoom
+        display none        
+
     .slide
       display none
       height 78vh
@@ -42,13 +45,14 @@
           height 80vh
           margin-top 5vh
 
-          .exit-view
-            display block
-            position absolute
-            top 1vh
-            right 1vw
-            font-size 3em
-            color white
+        .exit-view
+          display block
+          position absolute
+          top 1vh
+          right 1vw
+          font-size 3em
+          color white
+          cursor pointer
 
       .company-hero
         height 69vh
@@ -58,8 +62,8 @@
         border-radius 3px
         filter drop-shadow(0 3px 7px #333)
 
-        .exit-view
-          display none
+      .exit-view
+        display none
 
       .company-content
         z-index 100
