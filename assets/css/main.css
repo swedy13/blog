@@ -5066,8 +5066,12 @@ article.post .post-container .post-content a.post-title h1 {
   font-weight: 300;
   font-color: #444;
 }
-.companies-page .companies-slider .companies-container .companies-card .companies-content .companies-description {
+.companies-page .companies-slider .companies-container .companies-card .companies-content .companies-description p {
+  padding: 0 5px;
+  font-size: 0.9em;
   color: #444;
+  line-height: 1.5;
+  text-align: justify;
 }
 .companies-page .companies-slider .companies-container .companies-card .companies-content .companies-link {
   position: absolute;
@@ -5163,10 +5167,7 @@ article.post .post-container .post-content a.post-title h1 {
 }
 .company .companies-slider .slide .company-content {
   z-index: 100;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -5212,6 +5213,9 @@ article.post .post-container .post-content a.post-title h1 {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.company .companies-slider .slide .company-content .right .tools p {
+  display: none;
 }
 .company .companies-slider .slide .company-content .right .tools img {
   opacity: 0.7;

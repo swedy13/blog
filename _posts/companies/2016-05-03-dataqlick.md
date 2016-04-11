@@ -4,6 +4,7 @@ title: "DataQlick"
 thumbnail: dataqlick.png
 date: 2016-01-01 09:15:51 -0300
 categories: case_studies
+excerpt_separator: <!--more-->
 
 images:
   - url: /assets/img/companies/dataqlick/DashOriginal.png
@@ -38,6 +39,9 @@ images:
     alt: DataQlick - Inventory Mockup
     title: And rendered into a usable interface mockup
 ---
+
+An inventory management system integrated with Quickbooks. The redesign request was in response to customer complaints about the level of complexity.
+<!--more-->
 
 <table class="tools">
 <td><img alt="Microsoft Word" src="/assets/img/tools/msword.png"/></td>

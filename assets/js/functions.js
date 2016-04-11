@@ -181,6 +181,9 @@ function companiesMethods() {
 // ------------------------------------------------------
 function slideLoad() {
   $('.company-hero').css('opacity', '0').animate({opacity: 1}, 1500);
+  setTimeout(function() {
+    $('.company-content').slideDown(150).css('display', 'flex');
+  }, 2000);
 }
 
 function companySlider() {

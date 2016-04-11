@@ -7,6 +7,8 @@
       a(class="companies-picture {{post.title}}" href="{{post.url}}.html" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})")
       .companies-content
         .companies-name {{post.title}}
+        hr
         .companies-description {{post.excerpt}}
+        hr
         a(class="companies-link" href="{{post.url}}.html") more
   |{% endfor %}
