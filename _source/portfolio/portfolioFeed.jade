@@ -1,19 +1,18 @@
 article.portfolio#portfolio.portfolio-page
-  .portfolio-title portfolio
   .portfolio-slider
     // Iterate through all portfolio posts
     |{% for post in site.categories.portfolio reversed %}
-    .portfolio-container
-      .portfolio-card
-        .portfolio-flipper
-          .portfolio-front
-            h3.portfolio-head {{post.title}}
-            a(class="portfolio-link {{post.title}}" href="{{post.url}}.html" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})")
-          a(class="portfolio-back" href="{{post.url}}.html")
-            .portfolio-cap
-              h3.portfolio-head {{post.title}}
-              hr.portfolio-divider
-              .portfolio-description {{post.excerpt}}
-              hr.portfolio-divider
-              button.portfolio-button More
+    .card-container
+      .card
+        .card-flipper
+          .card-front
+            h3.card-head {{post.title}}
+            a(class="card-link {{post.title}}" href="{{post.url}}.html" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})")
+          a(class="card-back" href="{{post.url}}.html")
+            .card-cap
+              h3.card-head {{post.title}}
+              hr.card-divider
+              .card-description {{post.excerpt}}
+              hr.card-divider
+              button.card-button More
     |{% endfor %}

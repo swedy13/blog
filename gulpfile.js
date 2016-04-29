@@ -1,11 +1,11 @@
-var gulp				= require('gulp');
+var gulp								= require('gulp');
 var browserSync = require('browser-sync');
 var flatten     = require('gulp-flatten');
-var stylus			= require('gulp-stylus');
-var prefix			= require('gulp-autoprefixer');
-var jade				= require('gulp-jade');
-var child				= require('child_process');
-var del					= require('del');
+var stylus						= require('gulp-stylus');
+var prefix						= require('gulp-autoprefixer');
+var jade								= require('gulp-jade');
+var child							= require('child_process');
+var del									= require('del');
 var runSequence = require('run-sequence');
 
 var message = {

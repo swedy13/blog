@@ -3,14 +3,11 @@ header.site-header
   z-index 1
   position fixed
   height 36px
-  width 100%
-  background-color #222
-  box-shadow 2px 2px 5px #1c1c1c
+  width 100vw
+  background-color white
 
   .logo
     color #e1e1e1
-    background-color #c04443
-    box-shadow 3px 3px 5px #333
 
   &.invisible
     background-color transparent
@@ -23,7 +20,7 @@ header.site-header
 
     .nav-link
       visibility hidden
-    
+
     &:hover
       background-color #222
       box-shadow 2px 2px 5px #1c1c1c
@@ -34,7 +31,7 @@ header.site-header
 
       .nav-link
         visibility visible
-        
+
 .left
   left 0
 
@@ -49,10 +46,10 @@ header.site-header
   font-size 2em
   font-weight 300
   color #e1e1e1
-  
 
 
-  
+
+
 // FULL NAV MENU
 @media screen and (min-width: 548px)
   .main-nav
@@ -65,36 +62,36 @@ header.site-header
       margin 0px
       padding 0px
       list-style none
-      
+
       li
         .nav-color
           height 7px
           margin-bottom 6px
           background-color #e1e1e1
           border-right 1px solid #bbb
-      
+
         .nav-highlight
           background-color #c04443
-  
+
         .current-nav
           background-color #c04443
-              
+
         .nav-link
           padding 8px 12px 6px 12px
           padding-bottom 4px
           color #e5e5e5
-  
+
 
 
 // MOBILE NAV MENU
 @media screen and (min-width: 548px)
   .mobile-nav
     display none
-  
+
 @media screen and (max-width: 548px)
   .main-nav
     display none
-    
+
   .mobile-nav
     z-index 2
     display block
@@ -107,7 +104,7 @@ header.site-header
       position fixed
       top 32px
       right 0
-      
+
       li
         display none
         align-items center
@@ -121,12 +118,12 @@ header.site-header
           background-color #c04443
 
           .nav-link
-            color #e1e1e1          
+            color #e1e1e1
 
   .mobile-nav
     &:hover
       ul.nav-links
         background-color #e1e1e1
- 
+
         li
           display flex

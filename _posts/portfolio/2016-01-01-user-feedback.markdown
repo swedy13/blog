@@ -7,7 +7,7 @@ categories: portfolio
 tags: planning, dataqlick, guruface, mark-swedberg, mythros
 
 images:
-  
+
   - url: /assets/img/articles/user feedback/user-feedback.jpg
     alt: User Feedback
     title: User Feedback
